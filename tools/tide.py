@@ -106,7 +106,9 @@ if __name__ == "__main__":
     elif sys.argv[1] == "--packages":
         packages = sys.argv[2:]
     else:
-        print("Invalid argument. Please use either --org ORG or --user USER")
+        print(
+            "Invalid argument. Please use either --org ORG, --user USER or --packages PACKAGE1 PACKAGE2 ..."
+        )
         exit(1)
 
     get_tidelift_data(packages)
