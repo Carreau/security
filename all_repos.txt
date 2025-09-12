@@ -9,6 +9,7 @@ jupyter-incubator/contentmanagement      : jupyter_cms
 jupyter-incubator/proposals              : <none>
 jupyter-widgets/ipywidgets               : -
 jupyter-server/jupyter-resource-usage    : -
+jupyter-server/jupyter-resource-usage    : nbresuse
 jupyter-server/jupyter_server            : jupyter-server
 jupyter-server/pytest-jupyter            : -
 jupyter-server/jupyter_server_mathjax    : -
@@ -47,7 +48,7 @@ jupyter/jupyter_console                  : -
 jupyter/jupyter_kernel_test              : -
 jupyter/jupyter                          : -
 jupyter/nbdime                           : -
-jupyter/jupyterlab_geojson               : -
+jupyter/jupyterlab_geojson               : <none>
 jupyter/jupyter-sphinx                   : -
 jupyter/jupyter-packaging                : -
 jupyter/jupyterlab-fasta                 : -
@@ -223,7 +224,8 @@ binderhub-ci-repos/requirements: <none>
 ipython/pickleshare                 :  -
 jupyter/echo_kernel                 :  -
 jupyter/jupyter-alabaster-theme     :  -
-jupyter/jupyter_markdown            :  jupyter_markdown
+# under datalayer org
+jupyter/jupyter_markdown            :  <none>
 jupyter/jupyterhub-carina           :  -
 jupyter/nb2kg                       :  -
 jupyter/sphinxcontrib_github_alt    :  sphinxcontrib_github_alt
@@ -426,6 +428,17 @@ jupyterlab/mimerender-cookiecutter: <none>
 jupyterlab/jupyterlab-commenting: jupyterlab-commenting-service
 jupyterlab/jupyterlab-celltags: <none>
 jupyterlab/jupyterlab-bot: <none>
+jupyterlab/jupytercon-jupyterlab-training : <none>
+jupyterlab/theme-cookiecutter : <none>
+jupyterlab/runall-extension : <none>
+jupyterlab/mimerender-cookiecutter-ts : <none>
+jupyterlab/jupyterlab-toc : <none>
+jupyterlab/maintainer-tools: <none>
+jupyterlab/language-pack-cookiecutter : <none>
+jupyterlab/jupyterlab-statusbar : <none>
+jupyterlab/jupyterlab-shortcutui : <none>
+jupyterlab/jupyterlab-probot : <none>
+jupyterlab/jupyterlab-monaco : <none>
 
 
 
@@ -450,6 +463,13 @@ jupyterhub/mybinder-tools               : <none>
 jupyterhub/jupyterlab-hub               : <none>
 jupyterhub/jupyterhub-the-hard-way      : <none>
 jupyterhub/hubshare                     : <none>
+
+
+jupyterlab/jupyter-renderers : jupyterlab-fasta
+jupyterlab/jupyter-renderers : jupyterlab-geojson
+jupyterlab/jupyter-renderers : jupyterlab-katex
+jupyterlab/jupyter-renderers : jupyterlab-mathjax2
+jupyterlab/jupyter-renderers : jupyterlab-vega3
 
 
 jupyter/scipy-2015-advanced-topics  : <none>
@@ -513,3 +533,11 @@ jupyter/roadmap                     : <none>
 jupyter/schema                      : <none>
 jupyter/services                    : <none>
 jupyter/showcase                    : <none>
+
+
+jupyterlab/jupyterlab-module-federation : <none>
+jupyterlab/jupyterlab-metadata-service : <none>
+jupyterlab/jupyterlab-media : <none>
+jupyter-server/council : <none>
+
+jupyterlab/hatch-nodejs-version  :  hatch-nodejs-version
