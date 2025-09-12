@@ -227,7 +227,7 @@ async def main(config_file: str = "all_repos.txt"):
             f"{len(targets)} To add to PiPy org – they are listed on the config file, with a "
             "corresponding Pypi package, but the package is not part of Pypi org:"
         )
-        for package_url, maintainers, is_ok in targets:
+        for package_url, maintainers, is_ok in sorted(targets):
             print(f"  [yellow]{package_url}[/yellow] maintained by")
             for maintainer in maintainers:
                 color = "[green]" if is_ok else "[red]"

@@ -226,7 +226,6 @@ jupyter/jupyter-alabaster-theme     :  -
 jupyter/jupyter_markdown            :  jupyter_markdown
 jupyter/jupyterhub-carina           :  -
 jupyter/nb2kg                       :  -
-jupyter/qtconsole                   :  -
 jupyter/sphinxcontrib_github_alt    :  sphinxcontrib_github_alt
 jupyter/testpath                    :  -
 jupyter/tmpnb                       :  -
@@ -385,7 +384,7 @@ jupyter/jupyter-js-utils : <none>
 
 
 # Own by the matplotlib org:
-voila-gallery/ipympl                      :  ipympl
+voila-gallery/ipympl                      :  <none>
 
 
 jupyterlab/jupyter-chat                   :  jupyterlab-chat
