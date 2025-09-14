@@ -264,7 +264,7 @@ jupyterhub/action-k8s-namespace-report      : <none>
 jupyterhub/action-major-minor-tag-calculator: <none>
 
 
-jupyterhub/alabaster-jupyterhub                 : -
+jupyterhub/alabaster-jupyterhub                 : alabaster_jupyterhub
 jupyterhub/batchspawner                         : -
 jupyterhub/binderhub                            : -
 jupyterhub/chartpress                           : -
