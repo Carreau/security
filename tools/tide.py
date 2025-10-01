@@ -45,7 +45,7 @@ def get_packages(url):
     return h3_tags
 
 
-def get_tidelift_data(packages):
+def get_tidelift_data(packages, only_liftable=False):
     packages_data = [{"platform": "pypi", "name": h3} for h3 in packages]
 
     data = {"packages": packages_data}
@@ -74,7 +74,9 @@ def get_tidelift_data(packages):
 
     # Create a table for aligned output
     table = Table(show_header=True, header_style="bold magenta")
+    table.add_column("#")
     table.add_column("Package Name")
+    table.add_column("Url")
     table.add_column("Estimated Money")
     table.add_column("Lifted")
 
@@ -89,11 +91,25 @@ def get_tidelift_data(packages):
     package_data.sort(
         key=lambda x: (x[1] is None, x[1], -maybefloat(x[2]), x[0])
     )  # sort lifted True first, then None, then False, then amount,  then by name
-    for name, lifted, estimated_money in package_data:
+    for i, (name, lifted, estimated_money) in enumerate(package_data, start=1):
         if lifted:
-            table.add_row(name, "-- need login ––", f"[green]{lifted}[/green]")
+            table.add_row(
+                str(i),
+                name,
+                f"https://pypi.org/project/{name}",
+                "-- need login ––",
+                f"[green]{lifted}[/green]",
+            )
         else:
-            table.add_row(name, str(estimated_money), f"[red]{lifted}[/red]")
+            if only_liftable and estimated_money is None:
+                continue
+            table.add_row(
+                str(i),
+                name,
+                f"https://pypi.org/project/{name}",
+                str(estimated_money),
+                f"[red]{lifted}[/red]",
+            )
 
     print(table)
 
@@ -102,6 +118,7 @@ if __name__ == "__main__":
     # URL of the webpage
     args = sys.argv[1:]
     packages = []
+    only_liftable = False
     while args:
         if args[0] == "--org":
             url = f"https://pypi.org/org/{args[1]}/"
@@ -114,9 +131,12 @@ if __name__ == "__main__":
         elif args[0] == "--packages":
             packages += args[1:]
             args = []
+        elif args[0] == "--only-liftable":
+            only_liftable = True
+            args = args[1:]
         else:
             print(
                 "Invalid argument. Please use either --org ORG, --user USER or --packages PACKAGE1 PACKAGE2 ..."
             )
             exit(1)
-    get_tidelift_data(packages)
+    get_tidelift_data(packages, only_liftable=only_liftable)
