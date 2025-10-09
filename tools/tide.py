@@ -12,9 +12,10 @@ from rich import print
 from bs4 import BeautifulSoup
 import sys
 from rich.table import Table
+from rich.prompt import Prompt
 
 
-def get_packages(url):
+def get_packages(url) -> list[str]:
     # Send a GET request to the webpage with a custom user agent
     headers = {"User-Agent": "python/request/jupyter"}
     response = requests.get(url, headers=headers, allow_redirects=True)
@@ -26,8 +27,18 @@ def get_packages(url):
     if "A required part of this site couldn’t load" in response.text:
         print(f"Fastly is blocking us for {url}. Status code: 403")
         print(
-            "You can try `Array.from(document.querySelectorAll('h3')).map(h3 => h3.innerText).join(' ');`, from js console when viewing a page from a browser and use the `--packages` option."
+            "You can try `Array.from(document.querySelectorAll('h3')).map(h3 => h3.innerText).join('\n');`, from js console when viewing a page from a browser and use the `--packages` option."
         )
+        print("past result")
+        packages = []
+        while res := input():
+            if not res:
+                break
+            packages.append(res.split(" ")[0])
+
+        if packages:
+            print(f"received {len(packages)} packages")
+            return packages
         exit(1)
 
     # Parse the HTML content

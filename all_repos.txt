@@ -333,7 +333,7 @@ jupyter-xeus/xeus-robot-wheel             :  xeus-robot
 
 # Voilà
 
-voila-dashboards/hotpot_km                :  hotpot_km
+voila-dashboards/hotpot_km                :  hotpot-km
 voila-dashboards/voici                    :  voici
 voila-dashboards/voila                    :  voila
 voila-dashboards/voila-debug              :  voila-debug
