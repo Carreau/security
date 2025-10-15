@@ -8,6 +8,8 @@ jupyter-incubator/sparkmagic             : -
 jupyter-incubator/contentmanagement      : jupyter_cms
 jupyter-incubator/proposals              : <none>
 jupyter-widgets/ipywidgets               : -
+jupyter-widgets/ipywidgets               : widgetsnbextension
+
 jupyter-server/jupyter-resource-usage    : -
 jupyter-server/jupyter-resource-usage    : nbresuse
 jupyter-server/jupyter_server            : jupyter-server
