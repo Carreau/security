@@ -7,6 +7,7 @@
 #   "beautifulsoup4",
 #   "httpx",
 #   "textual",
+#   "playwright",
 # ]
 # ///
 import requests
@@ -24,6 +25,7 @@ from textual.app import ComposeResult, App
 from textual.containers import Container, Vertical
 from textual.widgets import DataTable, Footer, Header
 from textual.binding import Binding
+from rich.text import Text
 
 
 # Cache management
@@ -71,45 +73,185 @@ def save_release_time_cache(
         )
 
 
-def get_packages(url) -> list[str]:
-    # Send a GET request to the webpage with a custom user agent
-    headers = {"User-Agent": "python/request/jupyter"}
-    response = requests.get(url, headers=headers, allow_redirects=True)
+def get_cached_pypi_response(package_name: str) -> dict | None:
+    """Get cached PyPI response if it exists and is not expired."""
+    cache_file = get_cache_file(package_name)
+    if not cache_file.exists():
+        return None
 
-    if response.status_code != 200:
-        print(f"Failed to retrieve the webpage. Status code: {response.status_code}")
-        exit(1)
+    try:
+        with open(cache_file) as f:
+            data = json.load(f)
+        cache_timestamp = data.get("cache_timestamp", 0)
+        if datetime.now().timestamp() - cache_timestamp < CACHE_TTL_SECONDS:
+            pypi_data = data.get("pypi_data")
+            if pypi_data:
+                return pypi_data
+    except (json.JSONDecodeError, KeyError, TypeError):
+        pass
+    return None
 
-    if "A required part of this site couldn’t load" in response.text:
-        print(f"Fastly is blocking us for {url}. Status code: 403")
-        print(
-            "You can try `Array.from(document.querySelectorAll('h3')).map(h3 => h3.innerText).join('\n');`, from js console when viewing a page from a browser and use the `--packages` option."
+
+def save_pypi_response_cache(package_name: str, pypi_data: dict):
+    """Save PyPI response to cache."""
+    cache_file = get_cache_file(package_name)
+    with open(cache_file, "w") as f:
+        json.dump(
+            {
+                "cache_timestamp": datetime.now().timestamp(),
+                "pypi_data": pypi_data,
+            },
+            f,
         )
-        print("past result")
-        packages = []
-        while res := input():
-            if not res:
-                break
-            packages.append(res.split(" ")[0])
 
-        if packages:
-            print(f"received {len(packages)} packages")
-            return packages
-        exit(1)
 
-    # Parse the HTML content
-    soup = BeautifulSoup(response.content, "html.parser")
+async def get_packages_with_playwright(url: str) -> list[str] | None:
+    """Try to fetch packages using Playwright (handles JavaScript)."""
+    try:
+        from playwright.async_api import async_playwright
+    except ImportError:
+        return None
 
-    # Find all <h3> tags and accumulate their text in a list
-    h3_tags = [h3.get_text(strip=True) for h3 in soup.find_all("h3")]
+    try:
+        async with async_playwright() as p:
+            # Use chromium in headless mode
+            browser = await p.chromium.launch(headless=True)
+            page = await browser.new_page()
+            # Set a realistic user agent
+            await page.set_extra_http_headers(
+                {
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+                }
+            )
+            await page.goto(url, wait_until="networkidle")
+            # Wait a bit for any dynamic content
+            await page.wait_for_timeout(1000)
+            content = await page.content()
+            await browser.close()
 
-    # Sort the list of <h3> contents
-    h3_tags.sort()
+            soup = BeautifulSoup(content, "html.parser")
+            # Look for h3 tags that are package names (typically have a link or specific structure)
+            h3_tags = []
+            for h3 in soup.find_all("h3"):
+                text = h3.get_text(strip=True)
+                # Package names should not have spaces and are typically lowercase or start with letter
+                # Filter out headers like "Projects" or other non-package h3s
+                # Also filter out archived or special indicators
+                if (
+                    text
+                    and len(text) > 0
+                    and not text.isupper()
+                    and "Archived" not in text
+                    and "archived" not in text
+                ):
+                    h3_tags.append(text)
+            h3_tags.sort()
 
-    if not h3_tags:
-        print("No packages found")
-        exit(1)
-    return h3_tags
+            return h3_tags if h3_tags else None
+    except Exception as e:
+        error_str = str(e).lower()
+        if "executable" in error_str or "browser" in error_str or "not found" in error_str:
+            print(
+                "\n  Playwright browser binaries not found. Installing..."
+            )
+            import subprocess
+            try:
+                # Try to install chromium
+                subprocess.run(
+                    [sys.executable, "-m", "playwright", "install", "chromium"],
+                    check=True,
+                    timeout=120,
+                )
+                print("  Chromium installed. Retrying fetch...")
+                # Retry
+                return await get_packages_with_playwright(url)
+            except Exception as install_error:
+                print(f"\n  Failed to auto-install browsers: {install_error}")
+                print("  Try manually installing with:")
+                print("    uv run playwright install chromium\n")
+        else:
+            print(f"  Playwright error: {e}\n")
+        return None
+
+
+def get_packages(url) -> list[str]:
+    """Fetch packages from a PyPI URL, using Playwright if needed for Fastly bypass."""
+    print(f"Fetching packages from {url}...")
+
+    # First try with requests
+    headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"}
+    try:
+        response = requests.get(url, headers=headers, allow_redirects=True, timeout=10)
+        print(f"  Status: {response.status_code}")
+    except requests.RequestException as e:
+        print(f"  Request failed: {e}")
+        response = None
+
+    # Check if we got useful content
+    should_use_playwright = False
+
+    if response and response.status_code == 200:
+        if "A required part of this site couldn't load" in response.text:
+            should_use_playwright = True
+            print("  Fastly JS challenge detected")
+        else:
+            # Parse the HTML content
+            soup = BeautifulSoup(response.content, "html.parser")
+            # Filter h3 tags to package names (not all-uppercase headers or archived)
+            h3_tags = []
+            for h3 in soup.find_all("h3"):
+                text = h3.get_text(strip=True)
+                if (
+                    text
+                    and len(text) > 0
+                    and not text.isupper()
+                    and "Archived" not in text
+                    and "archived" not in text
+                ):
+                    h3_tags.append(text)
+            h3_tags.sort()
+
+            if h3_tags:
+                print(f"  Successfully fetched {len(h3_tags)} packages with requests")
+                return h3_tags
+            else:
+                print(f"  Request succeeded but no h3 tags found, trying Playwright")
+                should_use_playwright = True
+    else:
+        status = response.status_code if response else "No response"
+        print(f"  Request failed with status: {status}, trying Playwright")
+        should_use_playwright = True
+
+    # Try Playwright if requests didn't work
+    if should_use_playwright:
+        print(f"  Trying Playwright...")
+        try:
+            h3_tags = asyncio.run(get_packages_with_playwright(url))
+            if h3_tags:
+                print(f"  Successfully fetched {len(h3_tags)} packages using Playwright")
+                return h3_tags
+            else:
+                print(f"  Playwright returned no h3 tags")
+        except Exception as e:
+            print(f"  Playwright failed: {e}")
+
+    # If Playwright is not available or failed, fall back to manual input
+    print(
+        "Could not fetch automatically. You can try `Array.from(document.querySelectorAll('h3')).map(h3 => h3.innerText).join('\\n');` in your browser's JS console and paste the results below:"
+    )
+    print("Paste package names (one per line, empty line to finish):")
+    packages = []
+    while res := input():
+        if not res:
+            break
+        packages.append(res.split(" ")[0])
+
+    if packages:
+        print(f"Received {len(packages)} packages")
+        return packages
+
+    print("No packages provided")
+    exit(1)
 
 
 async def get_last_release_time(
@@ -119,17 +261,29 @@ async def get_last_release_time(
 
     Returns: (timestamp_seconds, human_readable_string)
     """
-    # Check cache first
+    # Check release time cache first
     cached = get_cached_release_time(package_name)
     if cached is not None:
         return cached
 
+    # Check PyPI response cache
+    data = get_cached_pypi_response(package_name)
+
     try:
-        response = await client.get(
-            f"https://pypi.org/pypi/{package_name}/json", timeout=5
-        )
-        response.raise_for_status()
-        data = response.json()
+        if data is None:
+            # Fetch from PyPI if not cached
+            response = await client.get(
+                f"https://pypi.org/pypi/{package_name}/json", timeout=5
+            )
+            if response.status_code == 404:
+                # Package doesn't exist on PyPI
+                result = (float("inf"), "not found")
+                save_release_time_cache(package_name, result)
+                return result
+            response.raise_for_status()
+            data = response.json()
+            # Cache the PyPI response
+            save_pypi_response_cache(package_name, data)
 
         releases = data["releases"]
         if not releases:
@@ -368,21 +522,43 @@ class TideApp(App):
         # Sort data
         sorted_data = self.get_sorted_data()
 
-        # Add rows
+        # Add rows with styling
         for item in sorted_data:
-            lifted_str = (
-                "✓" if item["lifted"] is True else "✗" if item["lifted"] is False else "-"
-            )
+            # Determine lifted status styling
+            if item["lifted"] is True:
+                lifted_style = "bold green"
+                lifted_str = "✓"
+            elif item["lifted"] is False:
+                lifted_style = "bold yellow"
+                lifted_str = "✗"
+            else:
+                lifted_style = "dim"
+                lifted_str = "—"
+
+            # Determine money styling
             money_str = (
                 str(item["estimated_money"])
                 if item["estimated_money"] is not None
                 else "--"
             )
+            money_style = "cyan" if item["estimated_money"] is not None else "dim"
+
+            # Determine release time styling
+            release_str = item["last_release"]
+            if release_str == "not found":
+                release_style = "red"
+            elif "today" in release_str or "day" in release_str:
+                release_style = "bold green"
+            elif "m ago" in release_str:
+                release_style = "yellow"
+            else:
+                release_style = "red"
+
             table.add_row(
                 item["name"],
-                lifted_str,
-                money_str,
-                item["last_release"],
+                Text(lifted_str, style=lifted_style),
+                Text(money_str, style=money_style),
+                Text(release_str, style=release_style),
             )
 
     def get_sorted_data(self) -> list[dict]:
