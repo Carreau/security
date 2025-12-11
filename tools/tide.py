@@ -5,6 +5,9 @@
 #   "requests",
 #   "rich",
 #   "beautifulsoup4",
+#   "trio",
+#   "anyio[trio]",
+#   "httpx",
 # ]
 # ///
 import requests
@@ -13,6 +16,10 @@ from bs4 import BeautifulSoup
 import sys
 from rich.table import Table
 from rich.prompt import Prompt
+from datetime import datetime
+import json
+import httpx
+import trio
 
 
 def get_packages(url) -> list[str]:
@@ -56,7 +63,77 @@ def get_packages(url) -> list[str]:
     return h3_tags
 
 
-def get_tidelift_data(packages, only_liftable=False):
+async def get_last_release_time(client: httpx.AsyncClient, package_name: str) -> str:
+    """Get human-readable time since last release for a package."""
+    try:
+        response = await client.get(
+            f"https://pypi.org/pypi/{package_name}/json", timeout=5
+        )
+        response.raise_for_status()
+        data = response.json()
+
+        releases = data["releases"]
+        if not releases:
+            return "unknown"
+
+        # Find the most recent release by actual upload date, not version number
+        latest_upload_time = None
+        for version, files in releases.items():
+            if not files:
+                continue
+            upload_time = files[0]["upload_time_iso_8601"]
+            if latest_upload_time is None or upload_time > latest_upload_time:
+                latest_upload_time = upload_time
+
+        if not latest_upload_time:
+            return "unknown"
+
+        release_dt = datetime.fromisoformat(latest_upload_time.replace("Z", "+00:00"))
+        now = datetime.now(release_dt.tzinfo)
+        delta = now - release_dt
+
+        days = delta.days
+        if days == 0:
+            return "today"
+        elif days == 1:
+            return "1 day ago"
+        elif days < 30:
+            return f"{days} days ago"
+        elif days < 365:
+            months = days // 30
+            return f"{months}m ago"
+        else:
+            years = days // 365
+            remaining_days = days % 365
+            months = remaining_days // 30
+
+            parts = []
+            parts.append(f"{years}y")
+            if months > 0:
+                parts.append(f"{months}m")
+
+            return ", ".join(parts) + " ago"
+    except (httpx.RequestError, KeyError, IndexError, ValueError):
+        return "unknown"
+
+
+async def fetch_release_times(packages: list[str]) -> dict[str, str]:
+    """Fetch release times for multiple packages concurrently."""
+    release_times = {}
+
+    async with httpx.AsyncClient() as client:
+
+        async def fetch_with_client(name):
+            release_times[name] = await get_last_release_time(client, name)
+
+        async with trio.open_nursery() as nursery:
+            for name in packages:
+                nursery.start_soon(fetch_with_client, name)
+
+    return release_times
+
+
+async def get_tidelift_data(packages, only_liftable=False):
     packages_data = [{"platform": "pypi", "name": h3} for h3 in packages]
 
     data = {"packages": packages_data}
@@ -90,6 +167,7 @@ def get_tidelift_data(packages, only_liftable=False):
     table.add_column("Url")
     table.add_column("Estimated Money")
     table.add_column("Lifted")
+    table.add_column("Last Release")
 
     def maybefloat(x):
         if x is None:
@@ -102,24 +180,37 @@ def get_tidelift_data(packages, only_liftable=False):
     package_data.sort(
         key=lambda x: (x[1] is None, x[1], -maybefloat(x[2]), x[0])
     )  # sort lifted True first, then None, then False, then amount,  then by name
+
+    # Fetch release times for lifted and liftable packages concurrently
+    packages_to_fetch = [
+        name
+        for name, lifted, estimated_money in package_data
+        if lifted or (estimated_money is not None)
+    ]
+    release_times = await fetch_release_times(packages_to_fetch)
+
     for i, (name, lifted, estimated_money) in enumerate(package_data, start=1):
         if lifted:
+            last_release = release_times.get(name, "unknown")
             table.add_row(
                 str(i),
                 name,
                 f"https://pypi.org/project/{name}",
                 "-- need login ––",
                 f"[green]{lifted}[/green]",
+                last_release,
             )
         else:
             if only_liftable and estimated_money is None:
                 continue
+            last_release = release_times.get(name, "unknown")
             table.add_row(
                 str(i),
                 name,
                 f"https://pypi.org/project/{name}",
                 str(estimated_money),
                 f"[red]{lifted}[/red]",
+                last_release,
             )
 
     print(table)
@@ -150,4 +241,8 @@ if __name__ == "__main__":
                 "Invalid argument. Please use either --org ORG, --user USER or --packages PACKAGE1 PACKAGE2 ..."
             )
             exit(1)
-    get_tidelift_data(packages, only_liftable=only_liftable)
+
+    async def main():
+        await get_tidelift_data(packages, only_liftable=only_liftable)
+
+    trio.run(main)
