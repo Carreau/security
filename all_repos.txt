@@ -270,7 +270,7 @@ jupyterhub/alabaster-jupyterhub                 : alabaster_jupyterhub
 jupyterhub/batchspawner                         : -
 jupyterhub/binderhub                            : -
 jupyterhub/chartpress                           : -
-jupyterhub/configurable-http-proxy              : -
+jupyterhub/configurable-http-proxy              : <none>
 jupyterhub/docker-image-cleaner                 : -
 jupyterhub/dockerspawner                        : -
 jupyterhub/gh-scoped-creds                      : -

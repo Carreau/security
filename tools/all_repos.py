@@ -1,10 +1,13 @@
 # https://packaging.python.org/en/latest/specifications/inline-script-metadata/
 # /// script
-# requires-python = ">=3.12"
+# requires-python = ">=3.13"
 # dependencies = [
+#   "asks",
+#   "anyio[trio]",
 #   "requests",
 #   "rich",
 #   "beautifulsoup4",
+#   "diskcache",
 # ]
 # ///
 """GitHub Organization Activity Tracker
