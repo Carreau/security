@@ -2,15 +2,14 @@
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [
-#   "requests",
 #   "rich",
 #   "beautifulsoup4",
 #   "httpx",
 #   "textual",
 #   "playwright",
+#   "typer",
 # ]
 # ///
-import requests
 from rich import print
 from bs4 import BeautifulSoup
 import sys
@@ -26,6 +25,8 @@ from textual.containers import Container, Vertical
 from textual.widgets import DataTable, Footer, Header
 from textual.binding import Binding
 from rich.text import Text
+import typer
+from typing import Optional, List
 
 
 # Cache management
@@ -34,14 +35,17 @@ CACHE_DIR.mkdir(parents=True, exist_ok=True)
 CACHE_TTL_SECONDS = 3600  # 1 hour
 
 
-def get_cache_file(package_name: str) -> Path:
-    """Get the cache file path for a package."""
-    return CACHE_DIR / f"{package_name}.json"
+def get_cache_file(package_name: str, type: str = "release") -> Path:
+    """Get the cache file path for a package.
+
+    type can be 'release' or 'pypi'
+    """
+    return CACHE_DIR / f"{package_name}_{type}.json"
 
 
 def get_cached_release_time(package_name: str) -> tuple[float, str] | None:
     """Get cached release time if it exists and is not expired."""
-    cache_file = get_cache_file(package_name)
+    cache_file = get_cache_file(package_name, type="release")
     if not cache_file.exists():
         return None
 
@@ -60,7 +64,7 @@ def save_release_time_cache(
     package_name: str, release_data: tuple[float, str]
 ):
     """Save release time to cache."""
-    cache_file = get_cache_file(package_name)
+    cache_file = get_cache_file(package_name, type="release")
     release_timestamp, release_display = release_data
     with open(cache_file, "w") as f:
         json.dump(
@@ -75,7 +79,7 @@ def save_release_time_cache(
 
 def get_cached_pypi_response(package_name: str) -> dict | None:
     """Get cached PyPI response if it exists and is not expired."""
-    cache_file = get_cache_file(package_name)
+    cache_file = get_cache_file(package_name, type="pypi")
     if not cache_file.exists():
         return None
 
@@ -94,12 +98,111 @@ def get_cached_pypi_response(package_name: str) -> dict | None:
 
 def save_pypi_response_cache(package_name: str, pypi_data: dict):
     """Save PyPI response to cache."""
-    cache_file = get_cache_file(package_name)
+    cache_file = get_cache_file(package_name, type="pypi")
     with open(cache_file, "w") as f:
         json.dump(
             {
                 "cache_timestamp": datetime.now().timestamp(),
                 "pypi_data": pypi_data,
+            },
+            f,
+        )
+
+
+def get_packages_cache(url: str) -> list[str] | None:
+    """Get cached package list from URL."""
+    cache_key = url.replace("/", "_").replace(":", "")
+    cache_file = CACHE_DIR / f"packages_{cache_key}.json"
+    if not cache_file.exists():
+        return None
+
+    try:
+        with open(cache_file) as f:
+            data = json.load(f)
+        timestamp = data.get("cache_timestamp", 0)
+        if datetime.now().timestamp() - timestamp < CACHE_TTL_SECONDS:
+            return data.get("packages")
+    except (json.JSONDecodeError, KeyError):
+        pass
+    return None
+
+
+def save_packages_cache(url: str, packages: list[str]):
+    """Save package list to cache."""
+    cache_key = url.replace("/", "_").replace(":", "")
+    cache_file = CACHE_DIR / f"packages_{cache_key}.json"
+    with open(cache_file, "w") as f:
+        json.dump(
+            {
+                "cache_timestamp": datetime.now().timestamp(),
+                "packages": packages,
+            },
+            f,
+        )
+
+
+def get_top_packages_cache(limit: int) -> list[str] | None:
+    """Get cached top packages list."""
+    cache_file = CACHE_DIR / f"top_packages_{limit}.json"
+    if not cache_file.exists():
+        return None
+
+    try:
+        with open(cache_file) as f:
+            data = json.load(f)
+        timestamp = data.get("cache_timestamp", 0)
+        if datetime.now().timestamp() - timestamp < CACHE_TTL_SECONDS:
+            return data.get("packages")
+    except (json.JSONDecodeError, KeyError):
+        pass
+    return None
+
+
+def save_top_packages_cache(limit: int, packages: list[str]):
+    """Save top packages list to cache."""
+    cache_file = CACHE_DIR / f"top_packages_{limit}.json"
+    with open(cache_file, "w") as f:
+        json.dump(
+            {
+                "cache_timestamp": datetime.now().timestamp(),
+                "packages": packages,
+            },
+            f,
+        )
+
+
+def get_tidelift_cache(packages: list[str]) -> list[dict] | None:
+    """Get cached Tidelift data for a set of packages."""
+    import hashlib
+    # Create a cache key from sorted package names
+    cache_key = hashlib.md5("_".join(sorted(packages)).encode()).hexdigest()
+    cache_file = CACHE_DIR / f"tidelift_{cache_key}.json"
+
+    if not cache_file.exists():
+        return None
+
+    try:
+        with open(cache_file) as f:
+            data = json.load(f)
+        timestamp = data.get("cache_timestamp", 0)
+        if datetime.now().timestamp() - timestamp < CACHE_TTL_SECONDS:
+            return data.get("data")
+    except (json.JSONDecodeError, KeyError):
+        pass
+    return None
+
+
+def save_tidelift_cache(packages: list[str], data: list[dict]):
+    """Save Tidelift data to cache."""
+    import hashlib
+    cache_key = hashlib.md5("_".join(sorted(packages)).encode()).hexdigest()
+    cache_file = CACHE_DIR / f"tidelift_{cache_key}.json"
+
+    with open(cache_file, "w") as f:
+        json.dump(
+            {
+                "cache_timestamp": datetime.now().timestamp(),
+                "data": data,
             },
             f,
         )
@@ -174,18 +277,50 @@ async def get_packages_with_playwright(url: str) -> list[str] | None:
         return None
 
 
-def get_packages(url) -> list[str]:
+async def get_top_packages(limit: int = 500) -> list[str]:
+    """Fetch the top N most downloaded PyPI packages."""
+    # Check cache first
+    cached = get_top_packages_cache(limit)
+    if cached:
+        print(f"Using cached top {limit} packages")
+        return cached
+
+    print(f"Fetching top {limit} most downloaded PyPI packages...")
+    try:
+        # Use the publicly maintained top PyPI packages list (contains 15000 packages)
+        url = "https://hugovk.github.io/top-pypi-packages/top-pypi-packages.min.json"
+        async with httpx.AsyncClient() as client:
+            response = await client.get(url, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+        packages = [pkg["project"] for pkg in data["rows"][:limit]]
+        print(f"Successfully fetched {len(packages)} top packages")
+        save_top_packages_cache(limit, packages)
+        return packages
+    except Exception as e:
+        print(f"Failed to fetch top packages: {e}")
+        return []
+
+
+async def get_packages(url) -> list[str]:
     """Fetch packages from a PyPI URL, using Playwright if needed for Fastly bypass."""
+    # Check cache first
+    cached = get_packages_cache(url)
+    if cached:
+        print(f"Using cached packages from {url}")
+        return cached
+
     print(f"Fetching packages from {url}...")
 
-    # First try with requests
+    # First try with httpx
     headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"}
+    response = None
     try:
-        response = requests.get(url, headers=headers, allow_redirects=True, timeout=10)
+        async with httpx.AsyncClient() as client:
+            response = await client.get(url, headers=headers, follow_redirects=True, timeout=10)
         print(f"  Status: {response.status_code}")
-    except requests.RequestException as e:
+    except httpx.RequestError as e:
         print(f"  Request failed: {e}")
-        response = None
 
     # Check if we got useful content
     should_use_playwright = False
@@ -212,7 +347,8 @@ def get_packages(url) -> list[str]:
             h3_tags.sort()
 
             if h3_tags:
-                print(f"  Successfully fetched {len(h3_tags)} packages with requests")
+                print(f"  Successfully fetched {len(h3_tags)} packages with httpx")
+                save_packages_cache(url, h3_tags)
                 return h3_tags
             else:
                 print(f"  Request succeeded but no h3 tags found, trying Playwright")
@@ -222,13 +358,14 @@ def get_packages(url) -> list[str]:
         print(f"  Request failed with status: {status}, trying Playwright")
         should_use_playwright = True
 
-    # Try Playwright if requests didn't work
+    # Try Playwright if httpx didn't work
     if should_use_playwright:
         print(f"  Trying Playwright...")
         try:
-            h3_tags = asyncio.run(get_packages_with_playwright(url))
+            h3_tags = await get_packages_with_playwright(url)
             if h3_tags:
                 print(f"  Successfully fetched {len(h3_tags)} packages using Playwright")
+                save_packages_cache(url, h3_tags)
                 return h3_tags
             else:
                 print(f"  Playwright returned no h3 tags")
@@ -248,6 +385,7 @@ def get_packages(url) -> list[str]:
 
     if packages:
         print(f"Received {len(packages)} packages")
+        save_packages_cache(url, packages)
         return packages
 
     print("No packages provided")
@@ -276,10 +414,8 @@ async def get_last_release_time(
                 f"https://pypi.org/pypi/{package_name}/json", timeout=5
             )
             if response.status_code == 404:
-                # Package doesn't exist on PyPI
-                result = (float("inf"), "not found")
-                save_release_time_cache(package_name, result)
-                return result
+                # Package doesn't exist on PyPI - don't cache
+                return (float("inf"), "not found")
             response.raise_for_status()
             data = response.json()
             # Cache the PyPI response
@@ -287,7 +423,8 @@ async def get_last_release_time(
 
         releases = data["releases"]
         if not releases:
-            result = (float("inf"), "unknown")
+            # No releases - don't cache
+            return (float("inf"), "unknown")
         else:
             # Find the most recent release by actual upload date, not version number
             latest_upload_time = None
@@ -299,7 +436,8 @@ async def get_last_release_time(
                     latest_upload_time = upload_time
 
             if not latest_upload_time:
-                result = (float("inf"), "unknown")
+                # No upload time found - don't cache
+                return (float("inf"), "unknown")
             else:
                 release_dt = datetime.fromisoformat(
                     latest_upload_time.replace("Z", "+00:00")
@@ -331,9 +469,9 @@ async def get_last_release_time(
                     human_readable = ", ".join(parts) + " ago"
 
                 result = (timestamp, human_readable)
-
-        save_release_time_cache(package_name, result)
-        return result
+                # Only cache successful results
+                save_release_time_cache(package_name, result)
+                return result
     except (httpx.RequestError, KeyError, IndexError, ValueError):
         return (float("inf"), "unknown")
 
@@ -361,18 +499,25 @@ async def fetch_release_times(
 
 async def get_tidelift_data(packages, only_liftable=False):
     """Fetch tidelift data and return enriched package information."""
+    # Check cache first
+    cached = get_tidelift_cache(packages)
+    if cached:
+        print(f"[CACHE HIT] Tidelift data for {len(packages)} packages")
+        return cached
+
+    print(f"[API REQUEST] Fetching Tidelift data for {len(packages)} packages...")
     packages_data = [{"platform": "pypi", "name": h3} for h3 in packages]
 
     data = {"packages": packages_data}
-    res = requests.post(
-        "https://tidelift.com/api/depci/estimate/bulk_estimates", json=data
-    )
-
-    res.raise_for_status()
+    async with httpx.AsyncClient() as client:
+        res = await client.post(
+            "https://tidelift.com/api/depci/estimate/bulk_estimates", json=data
+        )
+        res.raise_for_status()
+        response_data = res.json()
 
     # Collecting all package data
     package_data = []
-    response_data = res.json()
 
     for package in response_data:
         name = package["name"]
@@ -395,6 +540,7 @@ async def get_tidelift_data(packages, only_liftable=False):
 
     # Fetch release times for all packages
     packages_to_fetch = [name for name, _, _ in package_data]
+    print(f"[API REQUEST] Fetching PyPI release info for {len(packages_to_fetch)} packages...")
     release_times = await fetch_release_times(packages_to_fetch)
 
     # Build final data list
@@ -416,6 +562,8 @@ async def get_tidelift_data(packages, only_liftable=False):
             }
         )
 
+    # Save to cache
+    save_tidelift_cache(packages, result)
     return result
 
 
@@ -461,13 +609,15 @@ def print_table(data: list[dict]) -> None:
             if item["estimated_money"] is not None
             else "--"
         )
+        release_timestamp = item.get("last_release_timestamp", float("inf"))
+        release_style = get_release_style(release_timestamp)
         table.add_row(
             str(i),
             item["name"],
             f"https://pypi.org/project/{item['name']}",
             money_str,
             f"[green]{lifted_str}[/green]" if lifted_str == "✓" else f"[red]{lifted_str}[/red]",
-            item["last_release"],
+            f"[{release_style}]{item['last_release']}[/{release_style}]",
         )
 
     print(table)
@@ -484,11 +634,9 @@ class TideApp(App):
         Binding("l", "sort_release", "Sort by Release"),
     ]
 
-    def __init__(self, packages: list[str], only_liftable: bool):
+    def __init__(self, data: list[dict]):
         super().__init__()
-        self.packages = packages
-        self.only_liftable = only_liftable
-        self.data = []
+        self.data = data
         self.sort_column = None
         self.sort_reverse = False
 
@@ -498,19 +646,14 @@ class TideApp(App):
         yield DataTable(id="packages-table")
         yield Footer()
 
-    async def on_mount(self) -> None:
-        """Load data when app starts."""
+    def on_mount(self) -> None:
+        """Setup app when it starts."""
         table = self.query_one(DataTable)
         # Add columns once
         table.add_column("Package Name", key="name")
         table.add_column("Lifted", key="lifted")
         table.add_column("Estimated Money", key="estimated_money")
         table.add_column("Last Release", key="last_release")
-        await self.load_data()
-
-    async def load_data(self) -> None:
-        """Load package data from API."""
-        self.data = await get_tidelift_data(self.packages, self.only_liftable)
         self.populate_table()
 
     def populate_table(self) -> None:
@@ -543,16 +686,10 @@ class TideApp(App):
             )
             money_style = "cyan" if item["estimated_money"] is not None else "dim"
 
-            # Determine release time styling
+            # Determine release time styling based on timestamp
             release_str = item["last_release"]
-            if release_str == "not found":
-                release_style = "red"
-            elif "today" in release_str or "day" in release_str:
-                release_style = "bold green"
-            elif "m ago" in release_str:
-                release_style = "yellow"
-            else:
-                release_style = "red"
+            release_timestamp = item.get("last_release_timestamp", float("inf"))
+            release_style = get_release_style(release_timestamp)
 
             table.add_row(
                 item["name"],
@@ -646,42 +783,107 @@ class TideApp(App):
         self.populate_table()
 
 
-if __name__ == "__main__":
-    # URL of the webpage
-    args = sys.argv[1:]
-    packages = []
-    only_liftable = False
-    use_app = False
-    while args:
-        if args[0] == "--org":
-            url = f"https://pypi.org/org/{args[1]}/"
-            packages += get_packages(url)
-            args = args[2:]
-        elif args[0] == "--user":
-            url = f"https://pypi.org/user/{args[1]}/"
-            packages += get_packages(url)
-            args = args[2:]
-        elif args[0] == "--packages":
-            packages += args[1:]
-            args = []
-        elif args[0] == "--only-liftable":
-            only_liftable = True
-            args = args[1:]
-        elif args[0] == "--app":
-            use_app = True
-            args = args[1:]
-        else:
-            print(
-                "Invalid argument. Please use either --org ORG, --user USER or --packages PACKAGE1 PACKAGE2 ... [--only-liftable] [--app]"
-            )
-            exit(1)
+def get_release_style(timestamp: float) -> str:
+    """Determine color style based on release timestamp duration.
 
-    async def main():
-        return await get_tidelift_data(packages, only_liftable=only_liftable)
+    Returns style string based on how old the release is:
+    - < 1 month: blue
+    - 1 month - 6 months: green
+    - 6 months - 2 years: yellow
+    - > 2 years: red
+    - unknown/not found: red
+    """
+    if timestamp == float("inf"):
+        return "red"
 
-    if use_app:
-        app = TideApp(packages, only_liftable)
-        app.run()
+    release_dt = datetime.fromtimestamp(timestamp)
+    now = datetime.now(release_dt.tzinfo) if release_dt.tzinfo else datetime.now()
+    delta = now - release_dt
+    days = delta.days
+
+    if days < 30:
+        return "blue"
+    elif days < 180:  # 6 months
+        return "green"
+    elif days < 730:  # 2 years
+        return "yellow"
+    else:  # 2+ years
+        return "red"
+
+
+def clear_cache():
+    """Clear all cached data."""
+    import shutil
+    if CACHE_DIR.exists():
+        shutil.rmtree(CACHE_DIR)
+        CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        print(f"Cache cleared: {CACHE_DIR}")
     else:
-        data = asyncio.run(main())
+        print("Cache directory does not exist")
+
+
+app_cli = typer.Typer(help="Analyze Tidelift lifted packages and their release status")
+
+
+async def fetch_all_data(
+    org: Optional[str],
+    user: Optional[str],
+    packages: Optional[List[str]],
+    top: Optional[int],
+    only_liftable: bool,
+):
+    """Async function to fetch all data."""
+    package_list = []
+
+    if org:
+        url = f"https://pypi.org/org/{org}/"
+        package_list += await get_packages(url)
+
+    if user:
+        url = f"https://pypi.org/user/{user}/"
+        package_list += await get_packages(url)
+
+    if packages:
+        package_list += packages
+
+    if top is not None:
+        limit = top if top > 0 else 500
+        package_list += await get_top_packages(limit)
+
+    if not package_list:
+        typer.echo("Error: No packages specified. Use --org, --user, --packages, or --top")
+        raise typer.Exit(1)
+
+    # Fetch data
+    data = await get_tidelift_data(package_list, only_liftable=only_liftable)
+    return data
+
+
+@app_cli.command()
+def main(
+    org: Optional[str] = typer.Option(None, "--org", help="PyPI organization name"),
+    user: Optional[str] = typer.Option(None, "--user", help="PyPI user name"),
+    packages: Optional[List[str]] = typer.Option(None, "--packages", help="Package names"),
+    top: Optional[int] = typer.Option(None, "--top", help="Fetch top N most downloaded packages (default 500)"),
+    only_liftable: bool = typer.Option(False, "--only-liftable", help="Show only liftable packages"),
+    app: bool = typer.Option(False, "--app", help="Launch interactive TUI"),
+    clear_cache_flag: bool = typer.Option(False, "--clear-cache", help="Clear all cached data and exit"),
+):
+    """Analyze Tidelift package lift status and release dates."""
+    if clear_cache_flag:
+        clear_cache()
+        raise typer.Exit(0)
+
+    # Fetch all data in an async context
+    data = asyncio.run(fetch_all_data(org, user, packages, top, only_liftable))
+
+    # Launch app or print table (both are blocking/sync)
+    if app:
+        tui_app = TideApp(data)
+        tui_app.run()
+    else:
         print_table(data)
+
+
+if __name__ == "__main__":
+    app_cli()
