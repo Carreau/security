@@ -1,0 +1,351 @@
+{
+  "nodes": [
+    {
+      "id": "user:brettcannon",
+      "name": "brettcannon",
+      "type": "user"
+    },
+    {
+      "id": "package:mousebender",
+      "name": "mousebender",
+      "type": "package"
+    },
+    {
+      "id": "package:cherry-picker",
+      "name": "cherry-picker",
+      "type": "package"
+    },
+    {
+      "id": "package:microvenv",
+      "name": "microvenv",
+      "type": "package"
+    },
+    {
+      "id": "package:gidgethub",
+      "name": "gidgethub",
+      "type": "package"
+    },
+    {
+      "id": "package:uritemplate",
+      "name": "uritemplate",
+      "type": "package"
+    },
+    {
+      "id": "package:importlib-metadata",
+      "name": "importlib-metadata",
+      "type": "package"
+    },
+    {
+      "id": "package:packaging",
+      "name": "packaging",
+      "type": "package"
+    },
+    {
+      "id": "package:blurb",
+      "name": "blurb",
+      "type": "package"
+    },
+    {
+      "id": "package:importlib-resources",
+      "name": "importlib-resources",
+      "type": "package"
+    },
+    {
+      "id": "package:record-type",
+      "name": "record-type",
+      "type": "package"
+    },
+    {
+      "id": "package:basicenum",
+      "name": "basicenum",
+      "type": "package"
+    },
+    {
+      "id": "package:cortana",
+      "name": "cortana",
+      "type": "package"
+    },
+    {
+      "id": "package:desugar",
+      "name": "desugar",
+      "type": "package"
+    },
+    {
+      "id": "package:caniusepython3Archived",
+      "name": "caniusepython3Archived",
+      "type": "package"
+    },
+    {
+      "id": "package:modutilArchived",
+      "name": "modutilArchived",
+      "type": "package"
+    },
+    {
+      "id": "package:importlibArchived",
+      "name": "importlibArchived",
+      "type": "package"
+    },
+    {
+      "id": "package:mnfyArchived",
+      "name": "mnfyArchived",
+      "type": "package"
+    },
+    {
+      "id": "package:OplopArchived",
+      "name": "OplopArchived",
+      "type": "package"
+    },
+    {
+      "id": "package:importersArchived",
+      "name": "importersArchived",
+      "type": "package"
+    },
+    {
+      "id": "package:pep362Archived",
+      "name": "pep362Archived",
+      "type": "package"
+    },
+    {
+      "id": "user:d3r3kk",
+      "name": "d3r3kk",
+      "type": "user"
+    },
+    {
+      "id": "user:Mariatta",
+      "name": "Mariatta",
+      "type": "user"
+    },
+    {
+      "id": "user:mnot",
+      "name": "mnot",
+      "type": "user"
+    },
+    {
+      "id": "user:graffatcolmingov",
+      "name": "graffatcolmingov",
+      "type": "user"
+    },
+    {
+      "id": "user:jcgregorio",
+      "name": "jcgregorio",
+      "type": "user"
+    },
+    {
+      "id": "user:jaraco",
+      "name": "jaraco",
+      "type": "user"
+    },
+    {
+      "id": "user:barry",
+      "name": "barry",
+      "type": "user"
+    },
+    {
+      "id": "user:pradyunsg",
+      "name": "pradyunsg",
+      "type": "user"
+    },
+    {
+      "id": "user:dstufft",
+      "name": "dstufft",
+      "type": "user"
+    },
+    {
+      "id": "user:pf_moore",
+      "name": "pf_moore",
+      "type": "user"
+    },
+    {
+      "id": "user:hugovk",
+      "name": "hugovk",
+      "type": "user"
+    },
+    {
+      "id": "user:larry",
+      "name": "larry",
+      "type": "user"
+    }
+  ],
+  "links": [
+    {
+      "source": "user:brettcannon",
+      "target": "package:mousebender"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:cherry-picker"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:microvenv"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:gidgethub"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:uritemplate"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:importlib-metadata"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:packaging"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:blurb"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:importlib-resources"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:record-type"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:basicenum"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:cortana"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:desugar"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:caniusepython3Archived"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:modutilArchived"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:importlibArchived"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:mnfyArchived"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:OplopArchived"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:importersArchived"
+    },
+    {
+      "source": "user:brettcannon",
+      "target": "package:pep362Archived"
+    },
+    {
+      "source": "package:mousebender",
+      "target": "user:d3r3kk"
+    },
+    {
+      "source": "package:mousebender",
+      "target": "user:brettcannon"
+    },
+    {
+      "source": "package:cherry-picker",
+      "target": "user:Mariatta"
+    },
+    {
+      "source": "package:cherry-picker",
+      "target": "user:brettcannon"
+    },
+    {
+      "source": "package:microvenv",
+      "target": "user:brettcannon"
+    },
+    {
+      "source": "package:gidgethub",
+      "target": "user:Mariatta"
+    },
+    {
+      "source": "package:gidgethub",
+      "target": "user:brettcannon"
+    },
+    {
+      "source": "package:uritemplate",
+      "target": "user:mnot"
+    },
+    {
+      "source": "package:uritemplate",
+      "target": "user:graffatcolmingov"
+    },
+    {
+      "source": "package:uritemplate",
+      "target": "user:jcgregorio"
+    },
+    {
+      "source": "package:uritemplate",
+      "target": "user:brettcannon"
+    },
+    {
+      "source": "package:importlib-metadata",
+      "target": "user:jaraco"
+    },
+    {
+      "source": "package:importlib-metadata",
+      "target": "user:brettcannon"
+    },
+    {
+      "source": "package:importlib-metadata",
+      "target": "user:barry"
+    },
+    {
+      "source": "package:packaging",
+      "target": "user:pradyunsg"
+    },
+    {
+      "source": "package:packaging",
+      "target": "user:dstufft"
+    },
+    {
+      "source": "package:packaging",
+      "target": "user:pf_moore"
+    },
+    {
+      "source": "package:packaging",
+      "target": "user:brettcannon"
+    },
+    {
+      "source": "package:blurb",
+      "target": "user:hugovk"
+    },
+    {
+      "source": "package:blurb",
+      "target": "user:larry"
+    },
+    {
+      "source": "package:blurb",
+      "target": "user:brettcannon"
+    },
+    {
+      "source": "package:importlib-resources",
+      "target": "user:jaraco"
+    },
+    {
+      "source": "package:importlib-resources",
+      "target": "user:brettcannon"
+    },
+    {
+      "source": "package:importlib-resources",
+      "target": "user:barry"
+    },
+    {
+      "source": "package:basicenum",
+      "target": "user:brettcannon"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+#graph-container {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+
+.node {
+    cursor: pointer;
+}
+
+.node circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+.node text {
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.link {
+    stroke: #999;
+    stroke-opacity: 0.6;
+}

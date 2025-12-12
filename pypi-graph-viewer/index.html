@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyPI Maintainer Graph</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>PyPI Maintainer Graph</h1>
+    <div class="controls">
+        <label for="depth-slider">Initial Depth:</label>
+        <input type="range" id="depth-slider" min="1" max="5" value="2">
+        <span id="depth-value">2</span>
+    </div>
+    <div id="graph-container"></div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
