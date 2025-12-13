@@ -1,3 +1,18 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('graph-container');
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+    const depthSlider = document.getElementById('depth-slider');
+    const depthValue = document.getElementById('depth-value');
+
+    const svg = d3.select(container).append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .call(d3.zoom().on("zoom", (event) => {
+            g.attr("transform", event.transform);
+        }))
+        .on("dblclick.zoom", null); // Disable double-click zoom
+
     const g = svg.append("g");
 
     // Function to draw a pentagon
@@ -155,11 +170,11 @@
                 if (d.type === 'org') {
                     d3.select(this).append("path")
                         .attr("d", drawPentagon(10)) // 10 is radius
-                        .attr("fill", getNodeColor(d)); // Use getNodeColor(d)
+                        .attr("fill", getNodeColor(d));
                 } else {
                     d3.select(this).append("circle")
                         .attr("r", 10)
-                        .attr("fill", getNodeColor(d)); // Use getNodeColor(d)
+                        .attr("fill", getNodeColor(d));
                 }
             });
 
