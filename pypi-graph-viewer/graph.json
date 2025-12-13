@@ -1,143 +1,1067 @@
 {
   "nodes": [
     {
-      "id": "user:brettcannon",
-      "name": "brettcannon",
+      "id": "user:mbussonn",
+      "name": "mbussonn",
       "type": "user"
     },
     {
-      "id": "package:mousebender",
-      "name": "mousebender",
-      "type": "package"
+      "id": "package:jupyter-client",
+      "name": "jupyter-client",
+      "type": "package",
+      "maintainer_count": 12,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:cherry-picker",
-      "name": "cherry-picker",
-      "type": "package"
+      "id": "package:ipython",
+      "name": "ipython",
+      "type": "package",
+      "maintainer_count": 8,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:microvenv",
-      "name": "microvenv",
-      "type": "package"
+      "id": "package:pyflyby",
+      "name": "pyflyby",
+      "type": "package",
+      "maintainer_count": 8,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:gidgethub",
-      "name": "gidgethub",
-      "type": "package"
+      "id": "package:intersphinx-registry",
+      "name": "intersphinx-registry",
+      "type": "package",
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:uritemplate",
-      "name": "uritemplate",
-      "type": "package"
+      "id": "package:notebook",
+      "name": "notebook",
+      "type": "package",
+      "maintainer_count": 18,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:importlib-metadata",
-      "name": "importlib-metadata",
-      "type": "package"
+      "id": "package:ipywidgets",
+      "name": "ipywidgets",
+      "type": "package",
+      "maintainer_count": 10,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:packaging",
-      "name": "packaging",
-      "type": "package"
+      "id": "package:ipykernel",
+      "name": "ipykernel",
+      "type": "package",
+      "maintainer_count": 9,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:blurb",
-      "name": "blurb",
-      "type": "package"
+      "id": "package:matplotlib-inline",
+      "name": "matplotlib-inline",
+      "type": "package",
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:importlib-resources",
-      "name": "importlib-resources",
-      "type": "package"
+      "id": "package:jupyter-core",
+      "name": "jupyter-core",
+      "type": "package",
+      "maintainer_count": 13,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:record-type",
-      "name": "record-type",
-      "type": "package"
+      "id": "package:ipyparallel",
+      "name": "ipyparallel",
+      "type": "package",
+      "maintainer_count": 8,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:basicenum",
-      "name": "basicenum",
-      "type": "package"
+      "id": "package:jupyterlite-sphinx",
+      "name": "jupyterlite-sphinx",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:cortana",
-      "name": "cortana",
-      "type": "package"
+      "id": "package:qtconsole",
+      "name": "qtconsole",
+      "type": "package",
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:desugar",
-      "name": "desugar",
-      "type": "package"
+      "id": "package:comm",
+      "name": "comm",
+      "type": "package",
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:caniusepython3Archived",
-      "name": "caniusepython3Archived",
-      "type": "package"
+      "id": "package:sparkmagic",
+      "name": "sparkmagic",
+      "type": "package",
+      "maintainer_count": 5,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:modutilArchived",
-      "name": "modutilArchived",
-      "type": "package"
+      "id": "package:autovizwidget",
+      "name": "autovizwidget",
+      "type": "package",
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:importlibArchived",
-      "name": "importlibArchived",
-      "type": "package"
+      "id": "package:hdijupyterutils",
+      "name": "hdijupyterutils",
+      "type": "package",
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:mnfyArchived",
-      "name": "mnfyArchived",
-      "type": "package"
+      "id": "package:flit-core",
+      "name": "flit-core",
+      "type": "package",
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:OplopArchived",
-      "name": "OplopArchived",
-      "type": "package"
+      "id": "package:flit",
+      "name": "flit",
+      "type": "package",
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:importersArchived",
-      "name": "importersArchived",
-      "type": "package"
+      "id": "package:pyshs",
+      "name": "pyshs",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
     },
     {
-      "id": "package:pep362Archived",
-      "name": "pep362Archived",
-      "type": "package"
+      "id": "package:tree-sitter-rst",
+      "name": "tree-sitter-rst",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
     },
     {
-      "id": "user:d3r3kk",
-      "name": "d3r3kk",
+      "id": "package:jupyter-events",
+      "name": "jupyter-events",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:nbconvert",
+      "name": "nbconvert",
+      "type": "package",
+      "maintainer_count": 14,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:ipython-pygments-lexers",
+      "name": "ipython-pygments-lexers",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:nbclient",
+      "name": "nbclient",
+      "type": "package",
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:sphinx_toml",
+      "name": "sphinx_toml",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:SPQR",
+      "name": "SPQR",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:nbdime",
+      "name": "nbdime",
+      "type": "package",
+      "maintainer_count": 6,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:jupyter",
+      "name": "jupyter",
+      "type": "package",
+      "maintainer_count": 8,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:traitlets",
+      "name": "traitlets",
+      "type": "package",
+      "maintainer_count": 12,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:nbformat",
+      "name": "nbformat",
+      "type": "package",
+      "maintainer_count": 13,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:jupyter-kernel-gateway",
+      "name": "jupyter-kernel-gateway",
+      "type": "package",
+      "maintainer_count": 10,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:jupyter-server-terminals",
+      "name": "jupyter-server-terminals",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:terminado",
+      "name": "terminado",
+      "type": "package",
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:papyri",
+      "name": "papyri",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:papyri-lab",
+      "name": "papyri-lab",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:notebook-shim",
+      "name": "notebook-shim",
+      "type": "package",
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:julia",
+      "name": "julia",
+      "type": "package",
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:ksmm",
+      "name": "ksmm",
+      "type": "package",
+      "maintainer_count": 7,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:jupyter-console",
+      "name": "jupyter-console",
+      "type": "package",
+      "maintainer_count": 9,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:consent_broker",
+      "name": "consent_broker",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:trajectory-alignment",
+      "name": "trajectory-alignment",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:there",
+      "name": "there",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:pep440",
+      "name": "pep440",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:jupyter-server-mathjax",
+      "name": "jupyter-server-mathjax",
+      "type": "package",
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:inplace_restarter",
+      "name": "inplace_restarter",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:testpath",
+      "name": "testpath",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:velin",
+      "name": "velin",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:jupyterhub-hmacauthenticator",
+      "name": "jupyterhub-hmacauthenticator",
+      "type": "package",
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:frappuccino",
+      "name": "frappuccino",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:pytest_covid",
+      "name": "pytest_covid",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:darken",
+      "name": "darken",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:jupyter-telemetry",
+      "name": "jupyter-telemetry",
+      "type": "package",
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:undefined",
+      "name": "undefined",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:sign",
+      "name": "sign",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:my_lib_test_may_2019",
+      "name": "my_lib_test_may_2019",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:hma17",
+      "name": "hma17",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:test_oct_25",
+      "name": "test_oct_25",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:jupytercontrib",
+      "name": "jupytercontrib",
+      "type": "package",
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:pickleshare",
+      "name": "pickleshare",
+      "type": "package",
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:cffi_magic",
+      "name": "cffi_magic",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:jupyterlab-launcher",
+      "name": "jupyterlab-launcher",
+      "type": "package",
+      "maintainer_count": 8,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:numbannotate",
+      "name": "numbannotate",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:pip_magic",
+      "name": "pip_magic",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:ipynb",
+      "name": "ipynb",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:nbviewer",
+      "name": "nbviewer",
+      "type": "package",
+      "maintainer_count": 11,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:superextensionsfromjupytersprints",
+      "name": "superextensionsfromjupytersprints",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:disp",
+      "name": "disp",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:sparklier",
+      "name": "sparklier",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:ftuple",
+      "name": "ftuple",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:jupytercon",
+      "name": "jupytercon",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:rlipython",
+      "name": "rlipython",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:hhgkjif",
+      "name": "hhgkjif",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:luck",
+      "name": "luck",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:ipython_genutils",
+      "name": "ipython_genutils",
+      "type": "package",
+      "maintainer_count": 5,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:async_magic",
+      "name": "async_magic",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:bytesrepr",
+      "name": "bytesrepr",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:positionalonly",
+      "name": "positionalonly",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:unstable",
+      "name": "unstable",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:dyes",
+      "name": "dyes",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:meeseeksbox",
+      "name": "meeseeksbox",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:friendlyautopep8",
+      "name": "friendlyautopep8",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:yieldbreaker",
+      "name": "yieldbreaker",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:weakrefable",
+      "name": "weakrefable",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:bids",
+      "name": "bids",
+      "type": "package",
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:nose_warnings_filters",
+      "name": "nose_warnings_filters",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:kiteapi",
+      "name": "kiteapi",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:warn",
+      "name": "warn",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:test_active_state_recipes",
+      "name": "test_active_state_recipes",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:test_requires_python_3_warehouse",
+      "name": "test_requires_python_3_warehouse",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:xonshpiration",
+      "name": "xonshpiration",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:mobobob",
+      "name": "mobobob",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:this_is_a_test",
+      "name": "this_is_a_test",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:love",
+      "name": "love",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:austin",
+      "name": "austin",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:testpy23",
+      "name": "testpy23",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:documentation",
+      "name": "documentation",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:christmas",
+      "name": "christmas",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:nothing",
+      "name": "nothing",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:create",
+      "name": "create",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:withlog",
+      "name": "withlog",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:overprint",
+      "name": "overprint",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:reaper",
+      "name": "reaper",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:spicy",
+      "name": "spicy",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:numpee",
+      "name": "numpee",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:gruf",
+      "name": "gruf",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:tmpnb",
+      "name": "tmpnb",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:something",
+      "name": "something",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:care",
+      "name": "care",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:mochikernel",
+      "name": "mochikernel",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:xkcdrand",
+      "name": "xkcdrand",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:instruments",
+      "name": "instruments",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:morning",
+      "name": "morning",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:insupportable",
+      "name": "insupportable",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:jupytercore",
+      "name": "jupytercore",
+      "type": "package",
+      "maintainer_count": 8,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:nbapp",
+      "name": "nbapp",
+      "type": "package",
+      "maintainer_count": 8,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:roman_count",
+      "name": "roman_count",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:sphinx_numfig",
+      "name": "sphinx_numfig",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:pipcreate",
+      "name": "pipcreate",
+      "type": "package",
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:egg",
+      "name": "egg",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:chicken",
+      "name": "chicken",
+      "type": "package",
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:nullauthenticatorArchived",
+      "name": "nullauthenticatorArchived",
+      "type": "package",
+      "maintainer_count": 0,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "package:jupyterdriveArchived",
+      "name": "jupyterdriveArchived",
+      "type": "package",
+      "maintainer_count": 0,
+      "fetch_status": "fetched"
+    },
+    {
+      "id": "user:zsailer",
+      "name": "zsailer",
       "type": "user"
     },
     {
-      "id": "user:Mariatta",
-      "name": "Mariatta",
+      "id": "user:Sylvain.Corlay",
+      "name": "Sylvain.Corlay",
       "type": "user"
     },
     {
-      "id": "user:mnot",
-      "name": "mnot",
+      "id": "user:MSeal",
+      "name": "MSeal",
       "type": "user"
     },
     {
-      "id": "user:graffatcolmingov",
-      "name": "graffatcolmingov",
+      "id": "user:minrk",
+      "name": "minrk",
       "type": "user"
     },
     {
-      "id": "user:jcgregorio",
-      "name": "jcgregorio",
+      "id": "user:mpacer",
+      "name": "mpacer",
       "type": "user"
     },
     {
-      "id": "user:jaraco",
-      "name": "jaraco",
+      "id": "user:davidbrochart",
+      "name": "davidbrochart",
       "type": "user"
     },
     {
-      "id": "user:barry",
-      "name": "barry",
+      "id": "user:takowl",
+      "name": "takowl",
+      "type": "user"
+    },
+    {
+      "id": "user:fperez",
+      "name": "fperez",
+      "type": "user"
+    },
+    {
+      "id": "user:ivanov",
+      "name": "ivanov",
+      "type": "user"
+    },
+    {
+      "id": "user:Kyle.Kelley",
+      "name": "Kyle.Kelley",
+      "type": "user"
+    },
+    {
+      "id": "user:bgranger",
+      "name": "bgranger",
+      "type": "user"
+    },
+    {
+      "id": "user:krassowski",
+      "name": "krassowski",
+      "type": "user"
+    },
+    {
+      "id": "user:trallard",
+      "name": "trallard",
+      "type": "user"
+    },
+    {
+      "id": "user:emzhang",
+      "name": "emzhang",
+      "type": "user"
+    },
+    {
+      "id": "user:saharansachin98",
+      "name": "saharansachin98",
+      "type": "user"
+    },
+    {
+      "id": "user:AyushBhojwani",
+      "name": "AyushBhojwani",
+      "type": "user"
+    },
+    {
+      "id": "user:dshivashankar1994",
+      "name": "dshivashankar1994",
+      "type": "user"
+    },
+    {
+      "id": "user:quarl",
+      "name": "quarl",
+      "type": "user"
+    },
+    {
+      "id": "user:ojha.sw",
+      "name": "ojha.sw",
+      "type": "user"
+    },
+    {
+      "id": "user:rsaim",
+      "name": "rsaim",
+      "type": "user"
+    },
+    {
+      "id": "user:melissawm",
+      "name": "melissawm",
+      "type": "user"
+    },
+    {
+      "id": "user:darian",
+      "name": "darian",
+      "type": "user"
+    },
+    {
+      "id": "user:RRosio",
+      "name": "RRosio",
+      "type": "user"
+    },
+    {
+      "id": "user:ericsnekbytes",
+      "name": "ericsnekbytes",
+      "type": "user"
+    },
+    {
+      "id": "user:datalayer",
+      "name": "datalayer",
+      "type": "user"
+    },
+    {
+      "id": "user:jtp",
+      "name": "jtp",
+      "type": "user"
+    },
+    {
+      "id": "user:lresende",
+      "name": "lresende",
+      "type": "user"
+    },
+    {
+      "id": "user:gnestor",
+      "name": "gnestor",
+      "type": "user"
+    },
+    {
+      "id": "user:kevin-bates",
+      "name": "kevin-bates",
+      "type": "user"
+    },
+    {
+      "id": "user:jhamrick",
+      "name": "jhamrick",
+      "type": "user"
+    },
+    {
+      "id": "user:jasongrout",
+      "name": "jasongrout",
+      "type": "user"
+    },
+    {
+      "id": "user:martinRenou",
+      "name": "martinRenou",
+      "type": "user"
+    },
+    {
+      "id": "user:itayd",
+      "name": "itayd",
+      "type": "user"
+    },
+    {
+      "id": "user:maartenbreddels",
+      "name": "maartenbreddels",
+      "type": "user"
+    },
+    {
+      "id": "user:ianthomas23",
+      "name": "ianthomas23",
+      "type": "user"
+    },
+    {
+      "id": "user:willingc",
+      "name": "willingc",
+      "type": "user"
+    },
+    {
+      "id": "user:d.althviz",
+      "name": "d.althviz",
+      "type": "user"
+    },
+    {
+      "id": "user:ccordoba12",
+      "name": "ccordoba12",
+      "type": "user"
+    },
+    {
+      "id": "user:devstein",
+      "name": "devstein",
+      "type": "user"
+    },
+    {
+      "id": "user:hdinsightmsftagu",
+      "name": "hdinsightmsftagu",
+      "type": "user"
+    },
+    {
+      "id": "user:gaborbernat",
+      "name": "gaborbernat",
       "type": "user"
     },
     {
@@ -146,206 +1070,2141 @@
       "type": "user"
     },
     {
-      "id": "user:dstufft",
-      "name": "dstufft",
+      "id": "user:emilien.schultz",
+      "name": "emilien.schultz",
       "type": "user"
     },
     {
-      "id": "user:pf_moore",
-      "name": "pf_moore",
+      "id": "user:stsewd",
+      "name": "stsewd",
       "type": "user"
     },
     {
-      "id": "user:hugovk",
-      "name": "hugovk",
+      "id": "user:mdpacer",
+      "name": "mdpacer",
       "type": "user"
     },
     {
-      "id": "user:larry",
-      "name": "larry",
+      "id": "user:vidartf",
+      "name": "vidartf",
+      "type": "user"
+    },
+    {
+      "id": "user:Jonathan.Frederic",
+      "name": "Jonathan.Frederic",
+      "type": "user"
+    },
+    {
+      "id": "user:rmorshea",
+      "name": "rmorshea",
+      "type": "user"
+    },
+    {
+      "id": "user:blink1073",
+      "name": "blink1073",
+      "type": "user"
+    },
+    {
+      "id": "user:goanpeca",
+      "name": "goanpeca",
+      "type": "user"
+    },
+    {
+      "id": "user:jtyberg",
+      "name": "jtyberg",
+      "type": "user"
+    },
+    {
+      "id": "user:parente",
+      "name": "parente",
+      "type": "user"
+    },
+    {
+      "id": "user:rolweber",
+      "name": "rolweber",
+      "type": "user"
+    },
+    {
+      "id": "user:lbustelo",
+      "name": "lbustelo",
+      "type": "user"
+    },
+    {
+      "id": "user:ViralBShah",
+      "name": "ViralBShah",
+      "type": "user"
+    },
+    {
+      "id": "user:stevengj",
+      "name": "stevengj",
+      "type": "user"
+    },
+    {
+      "id": "user:tkf",
+      "name": "tkf",
+      "type": "user"
+    },
+    {
+      "id": "user:mlucool",
+      "name": "mlucool",
+      "type": "user"
+    },
+    {
+      "id": "user:anirrudh",
+      "name": "anirrudh",
+      "type": "user"
+    },
+    {
+      "id": "user:ericdatakelly",
+      "name": "ericdatakelly",
+      "type": "user"
+    },
+    {
+      "id": "user:divyansshhh",
+      "name": "divyansshhh",
+      "type": "user"
+    },
+    {
+      "id": "user:aman36",
+      "name": "aman36",
+      "type": "user"
+    },
+    {
+      "id": "user:yuvipanda",
+      "name": "yuvipanda",
+      "type": "user"
+    },
+    {
+      "id": "user:consideRatio",
+      "name": "consideRatio",
+      "type": "user"
+    },
+    {
+      "id": "user:danielballan",
+      "name": "danielballan",
+      "type": "user"
+    },
+    {
+      "id": "user:bnaul",
+      "name": "bnaul",
+      "type": "user"
+    },
+    {
+      "id": "user:sjvdwalt",
+      "name": "sjvdwalt",
+      "type": "user"
+    },
+    {
+      "id": "user:vivainio",
+      "name": "vivainio",
+      "type": "user"
+    },
+    {
+      "id": "user:yarikoptic",
+      "name": "yarikoptic",
+      "type": "user"
+    },
+    {
+      "id": "user:filo",
+      "name": "filo",
+      "type": "user"
+    },
+    {
+      "id": "user:rgommers",
+      "name": "rgommers",
+      "type": "user"
+    },
+    {
+      "id": "user:captainsafia",
+      "name": "captainsafia",
+      "type": "user"
+    },
+    {
+      "id": "user:pymmueller",
+      "name": "pymmueller",
       "type": "user"
     }
   ],
   "links": [
     {
-      "source": "user:brettcannon",
-      "target": "package:mousebender"
+      "source": "user:mbussonn",
+      "target": "package:jupyter-client"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:cherry-picker"
+      "source": "user:mbussonn",
+      "target": "package:ipython"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:microvenv"
+      "source": "user:mbussonn",
+      "target": "package:pyflyby"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:gidgethub"
+      "source": "user:mbussonn",
+      "target": "package:intersphinx-registry"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:uritemplate"
+      "source": "user:mbussonn",
+      "target": "package:notebook"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:importlib-metadata"
+      "source": "user:mbussonn",
+      "target": "package:ipywidgets"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:packaging"
+      "source": "user:mbussonn",
+      "target": "package:ipykernel"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:blurb"
+      "source": "user:mbussonn",
+      "target": "package:matplotlib-inline"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:importlib-resources"
+      "source": "user:mbussonn",
+      "target": "package:jupyter-core"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:record-type"
+      "source": "user:mbussonn",
+      "target": "package:ipyparallel"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:basicenum"
+      "source": "user:mbussonn",
+      "target": "package:jupyterlite-sphinx"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:cortana"
+      "source": "user:mbussonn",
+      "target": "package:qtconsole"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:desugar"
+      "source": "user:mbussonn",
+      "target": "package:comm"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:caniusepython3Archived"
+      "source": "user:mbussonn",
+      "target": "package:sparkmagic"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:modutilArchived"
+      "source": "user:mbussonn",
+      "target": "package:autovizwidget"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:importlibArchived"
+      "source": "user:mbussonn",
+      "target": "package:hdijupyterutils"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:mnfyArchived"
+      "source": "user:mbussonn",
+      "target": "package:flit-core"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:OplopArchived"
+      "source": "user:mbussonn",
+      "target": "package:flit"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:importersArchived"
+      "source": "user:mbussonn",
+      "target": "package:pyshs"
     },
     {
-      "source": "user:brettcannon",
-      "target": "package:pep362Archived"
+      "source": "user:mbussonn",
+      "target": "package:tree-sitter-rst"
     },
     {
-      "source": "package:mousebender",
-      "target": "user:d3r3kk"
+      "source": "user:mbussonn",
+      "target": "package:jupyter-events"
     },
     {
-      "source": "package:mousebender",
-      "target": "user:brettcannon"
+      "source": "user:mbussonn",
+      "target": "package:nbconvert"
     },
     {
-      "source": "package:cherry-picker",
-      "target": "user:Mariatta"
+      "source": "user:mbussonn",
+      "target": "package:ipython-pygments-lexers"
     },
     {
-      "source": "package:cherry-picker",
-      "target": "user:brettcannon"
+      "source": "user:mbussonn",
+      "target": "package:nbclient"
     },
     {
-      "source": "package:microvenv",
-      "target": "user:brettcannon"
+      "source": "user:mbussonn",
+      "target": "package:sphinx_toml"
     },
     {
-      "source": "package:gidgethub",
-      "target": "user:Mariatta"
+      "source": "user:mbussonn",
+      "target": "package:SPQR"
     },
     {
-      "source": "package:gidgethub",
-      "target": "user:brettcannon"
+      "source": "user:mbussonn",
+      "target": "package:nbdime"
     },
     {
-      "source": "package:uritemplate",
-      "target": "user:mnot"
+      "source": "user:mbussonn",
+      "target": "package:jupyter"
     },
     {
-      "source": "package:uritemplate",
-      "target": "user:graffatcolmingov"
+      "source": "user:mbussonn",
+      "target": "package:traitlets"
     },
     {
-      "source": "package:uritemplate",
-      "target": "user:jcgregorio"
+      "source": "user:mbussonn",
+      "target": "package:nbformat"
     },
     {
-      "source": "package:uritemplate",
-      "target": "user:brettcannon"
+      "source": "user:mbussonn",
+      "target": "package:jupyter-kernel-gateway"
     },
     {
-      "source": "package:importlib-metadata",
-      "target": "user:jaraco"
+      "source": "user:mbussonn",
+      "target": "package:jupyter-server-terminals"
     },
     {
-      "source": "package:importlib-metadata",
-      "target": "user:brettcannon"
+      "source": "user:mbussonn",
+      "target": "package:terminado"
     },
     {
-      "source": "package:importlib-metadata",
-      "target": "user:barry"
+      "source": "user:mbussonn",
+      "target": "package:papyri"
     },
     {
-      "source": "package:packaging",
+      "source": "user:mbussonn",
+      "target": "package:papyri-lab"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:notebook-shim"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:julia"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:ksmm"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:jupyter-console"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:consent_broker"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:trajectory-alignment"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:there"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:pep440"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:jupyter-server-mathjax"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:inplace_restarter"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:testpath"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:velin"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:jupyterhub-hmacauthenticator"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:frappuccino"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:pytest_covid"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:darken"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:jupyter-telemetry"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:undefined"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:sign"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:my_lib_test_may_2019"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:hma17"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:test_oct_25"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:jupytercontrib"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:pickleshare"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:cffi_magic"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:jupyterlab-launcher"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:numbannotate"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:pip_magic"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:ipynb"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:nbviewer"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:superextensionsfromjupytersprints"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:disp"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:sparklier"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:ftuple"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:jupytercon"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:rlipython"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:hhgkjif"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:luck"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:ipython_genutils"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:async_magic"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:bytesrepr"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:positionalonly"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:unstable"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:dyes"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:meeseeksbox"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:friendlyautopep8"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:yieldbreaker"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:weakrefable"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:bids"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:nose_warnings_filters"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:kiteapi"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:warn"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:test_active_state_recipes"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:test_requires_python_3_warehouse"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:xonshpiration"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:mobobob"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:this_is_a_test"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:love"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:austin"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:testpy23"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:documentation"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:christmas"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:nothing"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:create"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:withlog"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:overprint"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:reaper"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:spicy"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:numpee"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:gruf"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:tmpnb"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:something"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:care"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:mochikernel"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:xkcdrand"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:instruments"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:morning"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:insupportable"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:jupytercore"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:nbapp"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:roman_count"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:sphinx_numfig"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:pipcreate"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:egg"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:chicken"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:nullauthenticatorArchived"
+    },
+    {
+      "source": "user:mbussonn",
+      "target": "package:jupyterdriveArchived"
+    },
+    {
+      "source": "package:jupyter-client",
+      "target": "user:zsailer"
+    },
+    {
+      "source": "package:jupyter-client",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyter-client",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:jupyter-client",
+      "target": "user:MSeal"
+    },
+    {
+      "source": "package:jupyter-client",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyter-client",
+      "target": "user:mpacer"
+    },
+    {
+      "source": "package:jupyter-client",
+      "target": "user:davidbrochart"
+    },
+    {
+      "source": "package:jupyter-client",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:jupyter-client",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:jupyter-client",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:jupyter-client",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:jupyter-client",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:krassowski"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:trallard"
+    },
+    {
+      "source": "package:pyflyby",
+      "target": "user:emzhang"
+    },
+    {
+      "source": "package:pyflyby",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:pyflyby",
+      "target": "user:saharansachin98"
+    },
+    {
+      "source": "package:pyflyby",
+      "target": "user:AyushBhojwani"
+    },
+    {
+      "source": "package:pyflyby",
+      "target": "user:dshivashankar1994"
+    },
+    {
+      "source": "package:pyflyby",
+      "target": "user:quarl"
+    },
+    {
+      "source": "package:pyflyby",
+      "target": "user:ojha.sw"
+    },
+    {
+      "source": "package:pyflyby",
+      "target": "user:rsaim"
+    },
+    {
+      "source": "package:intersphinx-registry",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:intersphinx-registry",
+      "target": "user:melissawm"
+    },
+    {
+      "source": "package:intersphinx-registry",
+      "target": "user:trallard"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:darian"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:RRosio"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:ericsnekbytes"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:datalayer"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:jtp"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:mpacer"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:zsailer"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:lresende"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:gnestor"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:kevin-bates"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:jhamrick"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:jasongrout"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:itayd"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:maartenbreddels"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:ianthomas23"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:matplotlib-inline",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:matplotlib-inline",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:matplotlib-inline",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:matplotlib-inline",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:jupyter-core",
+      "target": "user:zsailer"
+    },
+    {
+      "source": "package:jupyter-core",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyter-core",
+      "target": "user:MSeal"
+    },
+    {
+      "source": "package:jupyter-core",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyter-core",
+      "target": "user:mpacer"
+    },
+    {
+      "source": "package:jupyter-core",
+      "target": "user:davidbrochart"
+    },
+    {
+      "source": "package:jupyter-core",
+      "target": "user:jasongrout"
+    },
+    {
+      "source": "package:jupyter-core",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:jupyter-core",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:jupyter-core",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:jupyter-core",
+      "target": "user:willingc"
+    },
+    {
+      "source": "package:jupyter-core",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:jupyter-core",
+      "target": "user:kevin-bates"
+    },
+    {
+      "source": "package:ipyparallel",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:ipyparallel",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:ipyparallel",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:ipyparallel",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:ipyparallel",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:ipyparallel",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:ipyparallel",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:ipyparallel",
+      "target": "user:jhamrick"
+    },
+    {
+      "source": "package:jupyterlite-sphinx",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:jupyterlite-sphinx",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:qtconsole",
+      "target": "user:d.althviz"
+    },
+    {
+      "source": "package:qtconsole",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:qtconsole",
+      "target": "user:ccordoba12"
+    },
+    {
+      "source": "package:comm",
+      "target": "user:jasongrout"
+    },
+    {
+      "source": "package:comm",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:comm",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:sparkmagic",
+      "target": "user:devstein"
+    },
+    {
+      "source": "package:sparkmagic",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:sparkmagic",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:sparkmagic",
+      "target": "user:hdinsightmsftagu"
+    },
+    {
+      "source": "package:sparkmagic",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:autovizwidget",
+      "target": "user:devstein"
+    },
+    {
+      "source": "package:autovizwidget",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:autovizwidget",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:autovizwidget",
+      "target": "user:hdinsightmsftagu"
+    },
+    {
+      "source": "package:hdijupyterutils",
+      "target": "user:devstein"
+    },
+    {
+      "source": "package:hdijupyterutils",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:hdijupyterutils",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:hdijupyterutils",
+      "target": "user:hdinsightmsftagu"
+    },
+    {
+      "source": "package:flit-core",
+      "target": "user:gaborbernat"
+    },
+    {
+      "source": "package:flit-core",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:flit-core",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:flit-core",
       "target": "user:pradyunsg"
     },
     {
-      "source": "package:packaging",
-      "target": "user:dstufft"
+      "source": "package:flit",
+      "target": "user:gaborbernat"
     },
     {
-      "source": "package:packaging",
-      "target": "user:pf_moore"
+      "source": "package:flit",
+      "target": "user:mbussonn"
     },
     {
-      "source": "package:packaging",
-      "target": "user:brettcannon"
+      "source": "package:flit",
+      "target": "user:takowl"
     },
     {
-      "source": "package:blurb",
-      "target": "user:hugovk"
+      "source": "package:flit",
+      "target": "user:pradyunsg"
     },
     {
-      "source": "package:blurb",
-      "target": "user:larry"
+      "source": "package:pyshs",
+      "target": "user:mbussonn"
     },
     {
-      "source": "package:blurb",
-      "target": "user:brettcannon"
+      "source": "package:pyshs",
+      "target": "user:emilien.schultz"
     },
     {
-      "source": "package:importlib-resources",
-      "target": "user:jaraco"
+      "source": "package:tree-sitter-rst",
+      "target": "user:mbussonn"
     },
     {
-      "source": "package:importlib-resources",
-      "target": "user:brettcannon"
+      "source": "package:tree-sitter-rst",
+      "target": "user:stsewd"
     },
     {
-      "source": "package:importlib-resources",
-      "target": "user:barry"
+      "source": "package:jupyter-events",
+      "target": "user:zsailer"
     },
     {
-      "source": "package:basicenum",
-      "target": "user:brettcannon"
+      "source": "package:jupyter-events",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:nbconvert",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:nbconvert",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:nbconvert",
+      "target": "user:MSeal"
+    },
+    {
+      "source": "package:nbconvert",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:nbconvert",
+      "target": "user:mpacer"
+    },
+    {
+      "source": "package:nbconvert",
+      "target": "user:jasongrout"
+    },
+    {
+      "source": "package:nbconvert",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:nbconvert",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:nbconvert",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:nbconvert",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:nbconvert",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:nbconvert",
+      "target": "user:mdpacer"
+    },
+    {
+      "source": "package:nbconvert",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:nbconvert",
+      "target": "user:jhamrick"
+    },
+    {
+      "source": "package:ipython-pygments-lexers",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:ipython-pygments-lexers",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:nbclient",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:nbclient",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:nbclient",
+      "target": "user:MSeal"
+    },
+    {
+      "source": "package:nbclient",
+      "target": "user:davidbrochart"
+    },
+    {
+      "source": "package:sphinx_toml",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:SPQR",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:nbdime",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:nbdime",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:nbdime",
+      "target": "user:vidartf"
+    },
+    {
+      "source": "package:nbdime",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:nbdime",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:nbdime",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:darian"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:jtp"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:zsailer"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:Jonathan.Frederic"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:rmorshea"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:blink1073"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:kevin-bates"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:goanpeca"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:mpacer"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:MSeal"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:mdpacer"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:jhamrick"
+    },
+    {
+      "source": "package:jupyter-kernel-gateway",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyter-kernel-gateway",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyter-kernel-gateway",
+      "target": "user:jtyberg"
+    },
+    {
+      "source": "package:jupyter-kernel-gateway",
+      "target": "user:parente"
+    },
+    {
+      "source": "package:jupyter-kernel-gateway",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:jupyter-kernel-gateway",
+      "target": "user:rolweber"
+    },
+    {
+      "source": "package:jupyter-kernel-gateway",
+      "target": "user:lresende"
+    },
+    {
+      "source": "package:jupyter-kernel-gateway",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:jupyter-kernel-gateway",
+      "target": "user:kevin-bates"
+    },
+    {
+      "source": "package:jupyter-kernel-gateway",
+      "target": "user:lbustelo"
+    },
+    {
+      "source": "package:jupyter-server-terminals",
+      "target": "user:zsailer"
+    },
+    {
+      "source": "package:jupyter-server-terminals",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:terminado",
+      "target": "user:jasongrout"
+    },
+    {
+      "source": "package:terminado",
+      "target": "user:darian"
+    },
+    {
+      "source": "package:terminado",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:terminado",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:papyri",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:papyri-lab",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:notebook-shim",
+      "target": "user:zsailer"
+    },
+    {
+      "source": "package:notebook-shim",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:notebook-shim",
+      "target": "user:datalayer"
+    },
+    {
+      "source": "package:notebook-shim",
+      "target": "user:jtp"
+    },
+    {
+      "source": "package:julia",
+      "target": "user:ViralBShah"
+    },
+    {
+      "source": "package:julia",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:julia",
+      "target": "user:stevengj"
+    },
+    {
+      "source": "package:julia",
+      "target": "user:tkf"
+    },
+    {
+      "source": "package:ksmm",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:ksmm",
+      "target": "user:mlucool"
+    },
+    {
+      "source": "package:ksmm",
+      "target": "user:goanpeca"
+    },
+    {
+      "source": "package:ksmm",
+      "target": "user:anirrudh"
+    },
+    {
+      "source": "package:ksmm",
+      "target": "user:ericdatakelly"
+    },
+    {
+      "source": "package:ksmm",
+      "target": "user:divyansshhh"
+    },
+    {
+      "source": "package:ksmm",
+      "target": "user:aman36"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:MSeal"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:davidbrochart"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:jhamrick"
+    },
+    {
+      "source": "package:consent_broker",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:trajectory-alignment",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:there",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:pep440",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:pep440",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:jupyter-server-mathjax",
+      "target": "user:zsailer"
+    },
+    {
+      "source": "package:jupyter-server-mathjax",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyter-server-mathjax",
+      "target": "user:vidartf"
+    },
+    {
+      "source": "package:inplace_restarter",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:testpath",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:testpath",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:velin",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyterhub-hmacauthenticator",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyterhub-hmacauthenticator",
+      "target": "user:yuvipanda"
+    },
+    {
+      "source": "package:jupyterhub-hmacauthenticator",
+      "target": "user:consideRatio"
+    },
+    {
+      "source": "package:frappuccino",
+      "target": "user:danielballan"
+    },
+    {
+      "source": "package:frappuccino",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:pytest_covid",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:darken",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyter-telemetry",
+      "target": "user:zsailer"
+    },
+    {
+      "source": "package:jupyter-telemetry",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyter-telemetry",
+      "target": "user:yuvipanda"
+    },
+    {
+      "source": "package:jupyter-telemetry",
+      "target": "user:blink1073"
+    },
+    {
+      "source": "package:undefined",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:sign",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:my_lib_test_may_2019",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:hma17",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:test_oct_25",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupytercontrib",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupytercontrib",
+      "target": "user:bnaul"
+    },
+    {
+      "source": "package:jupytercontrib",
+      "target": "user:sjvdwalt"
+    },
+    {
+      "source": "package:pickleshare",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:pickleshare",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:pickleshare",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:pickleshare",
+      "target": "user:vivainio"
+    },
+    {
+      "source": "package:cffi_magic",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:jasongrout"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:darian"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:blink1073"
+    },
+    {
+      "source": "package:numbannotate",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:pip_magic",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:ipynb",
+      "target": "user:yuvipanda"
+    },
+    {
+      "source": "package:ipynb",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:parente"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:mdpacer"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:mpacer"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:superextensionsfromjupytersprints",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:disp",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:disp",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:sparklier",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:ftuple",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupytercon",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:rlipython",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:rlipython",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:hhgkjif",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:luck",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:ipython_genutils",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:ipython_genutils",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:ipython_genutils",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:ipython_genutils",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:ipython_genutils",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:async_magic",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:bytesrepr",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:positionalonly",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:unstable",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:dyes",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:meeseeksbox",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:friendlyautopep8",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:yieldbreaker",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:weakrefable",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:bids",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:bids",
+      "target": "user:yarikoptic"
+    },
+    {
+      "source": "package:bids",
+      "target": "user:filo"
+    },
+    {
+      "source": "package:nose_warnings_filters",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:kiteapi",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:warn",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:test_active_state_recipes",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:test_requires_python_3_warehouse",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:xonshpiration",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:mobobob",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:this_is_a_test",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:love",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:austin",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:austin",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:testpy23",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:documentation",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:christmas",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:nothing",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:create",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:withlog",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:overprint",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:reaper",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:spicy",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:spicy",
+      "target": "user:rgommers"
+    },
+    {
+      "source": "package:numpee",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:gruf",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:tmpnb",
+      "target": "user:captainsafia"
+    },
+    {
+      "source": "package:tmpnb",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:something",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:care",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:mochikernel",
+      "target": "user:pymmueller"
+    },
+    {
+      "source": "package:mochikernel",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:xkcdrand",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:instruments",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:morning",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:insupportable",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupytercore",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupytercore",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:jupytercore",
+      "target": "user:jhamrick"
+    },
+    {
+      "source": "package:jupytercore",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupytercore",
+      "target": "user:Jonathan.Frederic"
+    },
+    {
+      "source": "package:jupytercore",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:jupytercore",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:jupytercore",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:nbapp",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:nbapp",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:nbapp",
+      "target": "user:jhamrick"
+    },
+    {
+      "source": "package:nbapp",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:nbapp",
+      "target": "user:Jonathan.Frederic"
+    },
+    {
+      "source": "package:nbapp",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:nbapp",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:nbapp",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:roman_count",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:sphinx_numfig",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:pipcreate",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:egg",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:egg",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:chicken",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:chicken",
+      "target": "user:Kyle.Kelley"
     }
   ]
 }

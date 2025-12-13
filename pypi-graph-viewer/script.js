@@ -1,26 +1,84 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('graph-container');
-    const width = container.clientWidth;
-    const height = container.clientHeight;
-    const depthSlider = document.getElementById('depth-slider');
-    const depthValue = document.getElementById('depth-value');
-
-    const svg = d3.select(container).append("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .call(d3.zoom().on("zoom", (event) => {
-            g.attr("transform", event.transform);
-        }))
-        .on("dblclick.zoom", null); // Disable double-click zoom
-
     const g = svg.append("g");
 
-    const color = d3.scaleOrdinal(d3.schemeCategory10);
+    // Function to draw a pentagon
+    function drawPentagon(radius) {
+        const sides = 5;
+        const angle = Math.PI * 2 / sides;
+        let path = "";
+        for (let i = 0; i < sides; i++) {
+            const x = radius * Math.sin(i * angle);
+            const y = -radius * Math.cos(i * angle);
+            if (i === 0) path += `M ${x} ${y}`;
+            else path += `L ${x} ${y}`;
+        }
+        path += "Z";
+        return path;
+    }
+
+    // Custom color function based on node properties
+    function getNodeColor(d) {
+        if (d.type === 'user') {
+            return '#1f77b4'; // Blue for users
+        } else if (d.type === 'org') {
+            return '#9467bd'; // Purple for organizations
+        } else if (d.type === 'package') {
+            if (d.fetch_status === 'unfetched' || d.fetch_status === 'error' || d.fetch_status === 'not_found') {
+                return '#8c8c8c'; // Grey for unfetched/error/not found packages
+            } else if (d.maintainer_count === 0) {
+                return '#d62728'; // Red for packages with 0 maintainers
+            } else if (d.maintainer_count === 1) {
+                return '#ff7f0e'; // Orange for packages with 1 maintainer
+            } else {
+                return '#2ca02c'; // Green for packages with >1 maintainer
+            }
+        }
+        return '#000'; // Default black
+    }
 
     const simulation = d3.forceSimulation()
         .force("link", d3.forceLink().id(d => d.id).distance(50))
         .force("charge", d3.forceManyBody().strength(-300))
         .force("center", d3.forceCenter(width / 2, height / 2));
+
+    // Legend Data
+    const legendData = [
+        { label: 'User', type: 'user' },
+        { label: 'Organization', type: 'org' }, // Type 'org' will be pentagon
+        { label: 'Package (>1 Maintainer)', type: 'package', maintainer_count: 2, fetch_status: 'fetched' },
+        { label: 'Package (1 Maintainer)', type: 'package', maintainer_count: 1, fetch_status: 'fetched' },
+        { label: 'Package (0 Maintainers)', type: 'package', maintainer_count: 0, fetch_status: 'fetched' },
+        { label: 'Package (Unfetched/Error)', type: 'package', maintainer_count: null, fetch_status: 'unfetched' }
+    ];
+
+    // Create Legend Group
+    const legend = svg.append("g")
+        .attr("class", "legend")
+        .attr("transform", `translate(${width - 200}, 20)`); // Position at top right
+
+    legend.selectAll("g.legend-item")
+        .data(legendData)
+        .enter().append("g")
+        .attr("class", "legend-item")
+        .attr("transform", (d, i) => `translate(0, ${i * 20})`)
+        .each(function(d) {
+            if (d.type === 'org') {
+                d3.select(this).append("path")
+                    .attr("d", drawPentagon(7)) // Pentagon for orgs in legend
+                    .attr("fill", getNodeColor(d));
+            } else {
+                d3.select(this).append("circle")
+                    .attr("r", 7)
+                    .attr("fill", getNodeColor(d));
+            }
+        });
+
+    legend.selectAll("g.legend-item")
+        .append("text")
+        .attr("x", 15)
+        .attr("y", 5)
+        .text(d => d.label)
+        .style("font-size", "12px")
+        .style("fill", "#333");
 
     d3.json("graph.json").then(fullGraph => {
         let visibleNodes;
@@ -86,23 +144,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 .attr("class", "link");
 
             const node = g.selectAll(".node")
-                .data(displayNodes, d => d.id)
-                .enter().append("g")
-                .attr("class", "node")
-                .call(drag(simulation))
-                .on('click', toggleNode);
+                .data(displayNodes, d => d.id);
+            
+            node.exit().remove();
 
-            node.append("circle")
-                .attr("r", 10)
-                .attr("fill", d => color(d.type));
+            const nodeEnter = node.enter().append("g")
+                .attr("class", "node");
+            
+            nodeEnter.each(function(d) {
+                if (d.type === 'org') {
+                    d3.select(this).append("path")
+                        .attr("d", drawPentagon(10)) // 10 is radius
+                        .attr("fill", getNodeColor(d)); // Use getNodeColor(d)
+                } else {
+                    d3.select(this).append("circle")
+                        .attr("r", 10)
+                        .attr("fill", getNodeColor(d)); // Use getNodeColor(d)
+                }
+            });
 
-            node.append("text")
+            nodeEnter.append("text")
                 .text(d => d.name)
                 .attr("x", 12)
                 .attr("y", 3);
                 
-            node.append("title")
+            nodeEnter.append("title")
                 .text(d => `${d.type}: ${d.name}`);
+
+            // Merge enter and update selections
+            const nodeUpdate = nodeEnter.merge(node);
+
+            nodeUpdate
+                .call(drag(simulation))
+                .on('click', toggleNode);
 
             simulation
                 .nodes(displayNodes)

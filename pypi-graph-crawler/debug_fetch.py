@@ -10,4 +10,4 @@ async def fetch_package_page(package: str):
 
 if __name__ == "__main__":
     import asyncio
-    asyncio.run(fetch_package_page("gidgethub"))
+    asyncio.run(fetch_package_page("record-type"))

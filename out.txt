@@ -1,0 +1,952 @@
+Found 107 packages in the pypi jupyter org
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccx
+TO add to PiPy org – they are listed on the config file, with a corresponding Pypi package, but the package is not part of Pypi org:
+  https://pypi.org/project/chartpress maintained by
+     pypi: `@yuvipanda` 
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@willingc` 
+     pypi: `@minrk` 
+  https://pypi.org/project/nullauthenticator maintained by
+     pypi: `@minrk` 
+  https://pypi.org/project/jupyverse maintained by
+     pypi: `@zsailer` 
+     pypi: `@davidbrochart` 
+  https://pypi.org/project/jupyterhub-nativeauthenticator maintained by
+     pypi: `@consideRatio` 
+     pypi: `@lambdatotoro` 
+     pypi: `@minrk` 
+  https://pypi.org/project/jupyterhub-firstuseauthenticator maintained by
+     pypi: `@yuvipanda` 
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@willirath` 
+     pypi: `@minrk` 
+  https://pypi.org/project/jupyter_markdown maintained by
+     pypi: `@datalayer` 
+  https://pypi.org/project/myst-spec maintained by
+     pypi: `@stevejpurves` 
+     pypi: `@fwkoch` 
+  https://pypi.org/project/alabaster-jupyterhub maintained by
+     pypi: `@choldgraf` 
+  https://pypi.org/project/jupyter_dashboards/ maintained by
+     pypi: `@javped` 
+     pypi: `@lbustelo` 
+     pypi: `@jtyberg` 
+     pypi: `@parente` 
+  https://pypi.org/project/sphinxcontrib_github_alt maintained by
+     pypi: `@takowl` 
+  https://pypi.org/project/pickleshare maintained by
+     pypi: `@minrk` 
+     pypi: `@takowl` 
+     pypi: `@vivainio` 
+     pypi: `@mbussonn` 
+  https://pypi.org/project/jupyter-ai maintained by
+     pypi: `@dlq` 
+  https://pypi.org/project/jupyter-rsession-proxy maintained by
+     pypi: `@yuvipanda` 
+     pypi: `@rylo` 
+     pypi: `@minrk` 
+  https://pypi.org/project/qtconsole maintained by
+     pypi: `@fperez` 
+     pypi: `@jhamrick` 
+     pypi: `@mbussonn` 
+     pypi: `@ccordoba12` 
+     pypi: `@bgranger` 
+     pypi: `@ivanov` 
+     pypi: `@minrk` 
+     pypi: `@Kyle.Kelley` 
+     pypi: `@takowl` 
+  https://pypi.org/project/voila maintained by
+     pypi: `@jasongrout` 
+     pypi: `@maartenbreddels` 
+     pypi: `@JohanMabille` 
+     pypi: `@jtp` 
+     pypi: `@martinRenou` 
+     pypi: `@trungleduc` 
+     pypi: `@Sylvain.Corlay` 
+  https://pypi.org/project/jupyter-server-proxy maintained by
+     pypi: `@rylo` 
+     pypi: `@yuvipanda` 
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@irose` 
+     pypi: `@minrk` 
+     pypi: `@betatim` 
+  https://pypi.org/project/jupyter_kernel_gateway_bundlers/ maintained by
+     pypi: `@parente` 
+  https://pypi.org/project/xeus-python-shell maintained by
+     pypi: `@martinRenou` 
+     pypi: `@Sylvain.Corlay` 
+     pypi: `@JohanMabille` 
+  https://pypi.org/project/wrapspawner maintained by
+     pypi: `@milligan` 
+  https://pypi.org/project/voila-material maintained by
+     pypi: `@martinRenou` 
+     pypi: `@maartenbreddels` 
+  https://pypi.org/project/nbgitpuller-downloader-googledrive maintained by
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@minrk` 
+  https://pypi.org/project/jupyterhub-idle-culler maintained by
+     pypi: `@consideRatio` 
+     pypi: `@GeorgianaElena` 
+     pypi: `@yuvipanda` 
+     pypi: `@betatim` 
+  https://pypi.org/project/jupyterhub-ltiauthenticator maintained by
+     pypi: `@yuvipanda` 
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@minrk` 
+     pypi: `@betatim` 
+     pypi: `@choldgraf` 
+  https://pypi.org/project/docker-image-cleaner maintained by
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@minrk` 
+  https://pypi.org/project/hatch-deps-selector maintained by
+     pypi: `@agoose77` 
+  https://pypi.org/project/sudospawner maintained by
+     pypi: `@yuvipanda` 
+     pypi: `@jupyterhub-bot` 
+     pypi: `@willingc` 
+     pypi: `@consideRatio` 
+     pypi: `@minrk` 
+  https://pypi.org/project/jupyterhub maintained by
+     pypi: `@yuvipanda` 
+     pypi: `@consideRatio` 
+     pypi: `@willingc` 
+     pypi: `@minrk` 
+     pypi: `@betatim` 
+     pypi: `@choldgraf` 
+  https://pypi.org/project/voici maintained by
+     pypi: `@martinRenou` 
+     pypi: `@trungleduc` 
+     pypi: `@jtp` 
+  https://pypi.org/project/ipympl maintained by
+     pypi: `@martinRenou` 
+     pypi: `@blink1073` 
+     pypi: `@ianhi` 
+     pypi: `@Sylvain.Corlay` 
+  https://pypi.org/project/jupyterhub-ldapauthenticator maintained by
+     pypi: `@yuvipanda` 
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@dhirschfeld` 
+     pypi: `@minrk` 
+  https://pypi.org/project/voila-topbar maintained by
+     pypi: `@trungleduc` 
+  https://pypi.org/project/jupyterhub-carina maintained by
+     pypi: `@Kyle.Kelley` 
+     pypi: `@carolynvs` 
+     pypi: `@minrk` 
+  https://pypi.org/project/simpervisor maintained by
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@yuvipanda` 
+     pypi: `@minrk` 
+  https://pypi.org/project/jupyterhub-systemdspawner maintained by
+     pypi: `@yuvipanda` 
+     pypi: `@consideRatio` 
+     pypi: `@minrk` 
+     pypi: `@betatim` 
+     pypi: `@choldgraf` 
+  https://pypi.org/project/voila-vuetify maintained by
+     pypi: `@mariobuikhuizen` 
+  https://pypi.org/project/jupyter_declarativewidgets/ maintained by
+     pypi: `@javped` 
+     pypi: `@lbustelo` 
+     pypi: `@jtyberg` 
+     pypi: `@parente` 
+  https://pypi.org/project/echo_kernel maintained by
+     pypi: `@blink1073` 
+     pypi: `@takowl` 
+  https://pypi.org/project/voila-reveal maintained by
+     pypi: `@JohanMabille` 
+     pypi: `@maartenbreddels` 
+     pypi: `@Sylvain.Corlay` 
+     pypi: `@jtp` 
+  https://pypi.org/project/jupyterhub-traefik-proxy maintained by
+     pypi: `@yuvipanda` 
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@willingc` 
+     pypi: `@minrk` 
+     pypi: `@betatim` 
+  https://pypi.org/project/pytest-jupyterhub maintained by
+     pypi: `@Sheila-nk` 
+     pypi: `@consideRatio` 
+     pypi: `@minrk` 
+  https://pypi.org/project/jupyterlab-data-explorer maintained by
+     pypi: `@yannanjing` 
+  https://pypi.org/project/jupyterhub-kerberosauthenticator maintained by
+     pypi: `@jcrist` 
+  https://pypi.org/project/voila-gridstack maintained by
+     pypi: `@maartenbreddels` 
+     pypi: `@JohanMabille` 
+     pypi: `@jtp` 
+     pypi: `@martinRenou` 
+     pypi: `@trungleduc` 
+     pypi: `@hbcarlos` 
+     pypi: `@Sylvain.Corlay` 
+  https://pypi.org/project/jupyter-builder maintained by
+     pypi: `@fcollonval` 
+     pypi: `@ronancoutinho03` 
+  https://pypi.org/project/pythreejs maintained by
+     pypi: `@jasongrout` 
+     pypi: `@vidartf` 
+     pypi: `@Sylvain.Corlay` 
+  https://pypi.org/project/jupyterhub-yarnspawner maintained by
+     pypi: `@jcrist` 
+  https://pypi.org/project/jupyterhub-simplespawner maintained by
+     pypi: `@yuvipanda` 
+  https://pypi.org/project/traittypes maintained by
+     pypi: `@jasongrout` 
+     pypi: `@maartenbreddels` 
+     pypi: `@Sylvain.Corlay` 
+  https://pypi.org/project/binderhub maintained by
+     pypi: `@yuvipanda` 
+     pypi: `@jupyterhub-bot` 
+     pypi: `@willingc` 
+     pypi: `@consideRatio` 
+     pypi: `@sgibson91` 
+     pypi: `@sas` 
+     pypi: `@minrk` 
+     pypi: `@betatim` 
+     pypi: `@choldgraf` 
+  https://pypi.org/project/batchspawner maintained by
+     pypi: `@milligan` 
+  https://pypi.org/project/ipydatagrid maintained by
+     pypi: `@martinRenou` 
+     pypi: `@itayd` 
+  https://pypi.org/project/retrolab maintained by
+     pypi: `@darian` 
+     pypi: `@blink1073` 
+     pypi: `@jtp` 
+  https://pypi.org/project/jupyter-repo2docker maintained by
+     pypi: `@yuvipanda` 
+     pypi: `@jupyterhub-bot` 
+     pypi: `@willingc` 
+     pypi: `@consideRatio` 
+     pypi: `@sgibson91` 
+     pypi: `@sas` 
+     pypi: `@minrk` 
+     pypi: `@betatim` 
+     pypi: `@choldgraf` 
+  https://pypi.org/project/mystmd maintained by
+     pypi: `@stevejpurves` 
+     pypi: `@agoose77` 
+     pypi: `@rowanc1` 
+     pypi: `@fwkoch` 
+     pypi: `@ebp-bot` 
+  https://pypi.org/project/tmpnb maintained by
+     pypi: `@captainsafia` 
+  https://pypi.org/project/nbgitpuller-downloader-dropbox maintained by
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@minrk` 
+  https://pypi.org/project/testpath maintained by
+     pypi: `@takowl` 
+     pypi: `@mbussonn` 
+  https://pypi.org/project/jupyter-alabaster-theme maintained by
+     pypi: `@willingc` 
+     pypi: `@bgranger` 
+  https://pypi.org/project/nbgitpuller-downloader-generic-web maintained by
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@minrk` 
+  https://pypi.org/project/jupyterhub-dummyauthenticator maintained by
+     pypi: `@yuvipanda` 
+  https://pypi.org/project/jupyterlab-myst maintained by
+     pypi: `@ebp-bot` 
+     pypi: `@rowanc1` 
+     pypi: `@agoose77` 
+     pypi: `@cjsewell` 
+  https://pypi.org/project/configurable-http-proxy maintained by
+     pypi: `@AbdealiJK` 
+     pypi: `@corridor` 
+  https://pypi.org/project/nbgitpuller maintained by
+     pypi: `@rylo` 
+     pypi: `@yuvipanda` 
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@sas` 
+     pypi: `@choldgraf` 
+  https://pypi.org/project/xeus-python maintained by
+     pypi: `@martinRenou` 
+     pypi: `@Sylvain.Corlay` 
+     pypi: `@JohanMabille` 
+  https://pypi.org/project/jupyterhub-kubespawner/ maintained by
+     pypi: `@yuvipanda` 
+     pypi: `@jupyterhub-bot` 
+     pypi: `@willingc` 
+     pypi: `@consideRatio` 
+     pypi: `@minrk` 
+     pypi: `@betatim` 
+  https://pypi.org/project/sphinx-ext-mystmd maintained by
+     pypi: `@agoose77` 
+  https://pypi.org/project/jupyterlab_launcher maintained by
+     pypi: `@jasongrout` 
+     pypi: `@fperez` 
+     pypi: `@mbussonn` 
+     pypi: `@bgranger` 
+     pypi: `@blink1073` 
+     pypi: `@darian` 
+     pypi: `@minrk` 
+     pypi: `@takowl` 
+  https://pypi.org/project/ipyleaflet maintained by
+     pypi: `@jasongrout` 
+     pypi: `@maartenbreddels` 
+     pypi: `@davidbrochart` 
+     pypi: `@bgranger` 
+     pypi: `@martinRenou` 
+     pypi: `@Sylvain.Corlay` 
+  https://pypi.org/project/oauthenticator maintained by
+     pypi: `@yuvipanda` 
+     pypi: `@jupyterhub-bot` 
+     pypi: `@willingc` 
+     pypi: `@consideRatio` 
+     pypi: `@minrk` 
+     pypi: `@choldgraf` 
+  https://pypi.org/project/hotpot_km maintained by
+     pypi: `@vidartf` 
+     pypi: `@maartenbreddels` 
+  https://pypi.org/project/robotframework-interpreter maintained by
+     pypi: `@martinRenou` 
+     pypi: `@Sylvain.Corlay` 
+  https://pypi.org/project/jupyter-remote-desktop-proxy maintained by
+     pypi: `@jupyterhub-bot` 
+     pypi: `@sas` 
+     pypi: `@consideRatio` 
+     pypi: `@yuvipanda` 
+  https://pypi.org/project/xeus-robot maintained by
+     pypi: `@martinRenou` 
+     pypi: `@Sylvain.Corlay` 
+     pypi: `@JohanMabille` 
+  https://pypi.org/project/sidecar maintained by
+     pypi: `@martinRenou` 
+     pypi: `@jasongrout` 
+     pypi: `@ianhi` 
+     pypi: `@Sylvain.Corlay` 
+  https://pypi.org/project/ipymidicontrols/ maintained by
+     pypi: `@bgranger` 
+     pypi: `@fperez` 
+     pypi: `@Sylvain.Corlay` 
+     pypi: `@jasongrout` 
+  https://pypi.org/project/gh-scoped-creds maintained by
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@yuvipanda` 
+  https://pypi.org/project/dockerspawner maintained by
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@willingc` 
+     pypi: `@sgibson91` 
+     pypi: `@minrk` 
+     pypi: `@betatim` 
+  https://pypi.org/project/jupyterlab-chat maintained by
+     pypi: `@nbrichet` 
+     pypi: `@jtp` 
+  https://pypi.org/project/jupyterhub-sphinx-theme maintained by
+     pypi: `@jupyterhub-bot` 
+     pypi: `@consideRatio` 
+     pypi: `@choldgraf` 
+  https://pypi.org/project/jupyter-sphinx-theme maintained by
+     pypi: `@Jonathan.Frederic` 
+  https://pypi.org/project/jupyterhub-tmpauthenticator maintained by
+     pypi: `@yuvipanda` 
+     pypi: `@consideRatio` 
+     pypi: `@minrk` 
+     pypi: `@betatim` 
+     pypi: `@choldgraf` 
+  https://pypi.org/project/voila-debug maintained by
+     pypi: `@unknown (blocked by fastly?)` 
+
+`@minrk` 28 packages (https://pypi.org/user/minrk/):
+    https://pypi.org/project/binderhub
+    https://pypi.org/project/chartpress
+    https://pypi.org/project/docker-image-cleaner
+    https://pypi.org/project/dockerspawner
+    https://pypi.org/project/jupyter-repo2docker
+    https://pypi.org/project/jupyter-rsession-proxy
+    https://pypi.org/project/jupyter-server-proxy
+    https://pypi.org/project/jupyterhub
+    https://pypi.org/project/jupyterhub-carina
+    https://pypi.org/project/jupyterhub-firstuseauthenticator
+    https://pypi.org/project/jupyterhub-kubespawner/
+    https://pypi.org/project/jupyterhub-ldapauthenticator
+    https://pypi.org/project/jupyterhub-ltiauthenticator
+    https://pypi.org/project/jupyterhub-nativeauthenticator
+    https://pypi.org/project/jupyterhub-systemdspawner
+    https://pypi.org/project/jupyterhub-tmpauthenticator
+    https://pypi.org/project/jupyterhub-traefik-proxy
+    https://pypi.org/project/jupyterlab_launcher
+    https://pypi.org/project/nbgitpuller-downloader-dropbox
+    https://pypi.org/project/nbgitpuller-downloader-generic-web
+    https://pypi.org/project/nbgitpuller-downloader-googledrive
+    https://pypi.org/project/nullauthenticator
+    https://pypi.org/project/oauthenticator
+    https://pypi.org/project/pickleshare
+    https://pypi.org/project/pytest-jupyterhub
+    https://pypi.org/project/qtconsole
+    https://pypi.org/project/simpervisor
+    https://pypi.org/project/sudospawner
+`@consideRatio` 27 packages (https://pypi.org/user/consideRatio/):
+    https://pypi.org/project/binderhub
+    https://pypi.org/project/chartpress
+    https://pypi.org/project/docker-image-cleaner
+    https://pypi.org/project/dockerspawner
+    https://pypi.org/project/gh-scoped-creds
+    https://pypi.org/project/jupyter-remote-desktop-proxy
+    https://pypi.org/project/jupyter-repo2docker
+    https://pypi.org/project/jupyter-server-proxy
+    https://pypi.org/project/jupyterhub
+    https://pypi.org/project/jupyterhub-firstuseauthenticator
+    https://pypi.org/project/jupyterhub-idle-culler
+    https://pypi.org/project/jupyterhub-kubespawner/
+    https://pypi.org/project/jupyterhub-ldapauthenticator
+    https://pypi.org/project/jupyterhub-ltiauthenticator
+    https://pypi.org/project/jupyterhub-nativeauthenticator
+    https://pypi.org/project/jupyterhub-sphinx-theme
+    https://pypi.org/project/jupyterhub-systemdspawner
+    https://pypi.org/project/jupyterhub-tmpauthenticator
+    https://pypi.org/project/jupyterhub-traefik-proxy
+    https://pypi.org/project/nbgitpuller
+    https://pypi.org/project/nbgitpuller-downloader-dropbox
+    https://pypi.org/project/nbgitpuller-downloader-generic-web
+    https://pypi.org/project/nbgitpuller-downloader-googledrive
+    https://pypi.org/project/oauthenticator
+    https://pypi.org/project/pytest-jupyterhub
+    https://pypi.org/project/simpervisor
+    https://pypi.org/project/sudospawner
+`@yuvipanda` 22 packages (https://pypi.org/user/yuvipanda/):
+    https://pypi.org/project/binderhub
+    https://pypi.org/project/chartpress
+    https://pypi.org/project/gh-scoped-creds
+    https://pypi.org/project/jupyter-remote-desktop-proxy
+    https://pypi.org/project/jupyter-repo2docker
+    https://pypi.org/project/jupyter-rsession-proxy
+    https://pypi.org/project/jupyter-server-proxy
+    https://pypi.org/project/jupyterhub
+    https://pypi.org/project/jupyterhub-dummyauthenticator
+    https://pypi.org/project/jupyterhub-firstuseauthenticator
+    https://pypi.org/project/jupyterhub-idle-culler
+    https://pypi.org/project/jupyterhub-kubespawner/
+    https://pypi.org/project/jupyterhub-ldapauthenticator
+    https://pypi.org/project/jupyterhub-ltiauthenticator
+    https://pypi.org/project/jupyterhub-simplespawner
+    https://pypi.org/project/jupyterhub-systemdspawner
+    https://pypi.org/project/jupyterhub-tmpauthenticator
+    https://pypi.org/project/jupyterhub-traefik-proxy
+    https://pypi.org/project/nbgitpuller
+    https://pypi.org/project/oauthenticator
+    https://pypi.org/project/simpervisor
+    https://pypi.org/project/sudospawner
+`@jupyterhub-bot` 21 packages (https://pypi.org/user/jupyterhub-bot/):
+    https://pypi.org/project/binderhub
+    https://pypi.org/project/chartpress
+    https://pypi.org/project/docker-image-cleaner
+    https://pypi.org/project/dockerspawner
+    https://pypi.org/project/gh-scoped-creds
+    https://pypi.org/project/jupyter-remote-desktop-proxy
+    https://pypi.org/project/jupyter-repo2docker
+    https://pypi.org/project/jupyter-server-proxy
+    https://pypi.org/project/jupyterhub-firstuseauthenticator
+    https://pypi.org/project/jupyterhub-kubespawner/
+    https://pypi.org/project/jupyterhub-ldapauthenticator
+    https://pypi.org/project/jupyterhub-ltiauthenticator
+    https://pypi.org/project/jupyterhub-sphinx-theme
+    https://pypi.org/project/jupyterhub-traefik-proxy
+    https://pypi.org/project/nbgitpuller
+    https://pypi.org/project/nbgitpuller-downloader-dropbox
+    https://pypi.org/project/nbgitpuller-downloader-generic-web
+    https://pypi.org/project/nbgitpuller-downloader-googledrive
+    https://pypi.org/project/oauthenticator
+    https://pypi.org/project/simpervisor
+    https://pypi.org/project/sudospawner
+`@Sylvain.Corlay` 13 packages (https://pypi.org/user/Sylvain.Corlay/):
+    https://pypi.org/project/ipyleaflet
+    https://pypi.org/project/ipymidicontrols/
+    https://pypi.org/project/ipympl
+    https://pypi.org/project/pythreejs
+    https://pypi.org/project/robotframework-interpreter
+    https://pypi.org/project/sidecar
+    https://pypi.org/project/traittypes
+    https://pypi.org/project/voila
+    https://pypi.org/project/voila-gridstack
+    https://pypi.org/project/voila-reveal
+    https://pypi.org/project/xeus-python
+    https://pypi.org/project/xeus-python-shell
+    https://pypi.org/project/xeus-robot
+`@martinRenou` 12 packages (https://pypi.org/user/martinRenou/):
+    https://pypi.org/project/ipydatagrid
+    https://pypi.org/project/ipyleaflet
+    https://pypi.org/project/ipympl
+    https://pypi.org/project/robotframework-interpreter
+    https://pypi.org/project/sidecar
+    https://pypi.org/project/voici
+    https://pypi.org/project/voila
+    https://pypi.org/project/voila-gridstack
+    https://pypi.org/project/voila-material
+    https://pypi.org/project/xeus-python
+    https://pypi.org/project/xeus-python-shell
+    https://pypi.org/project/xeus-robot
+`@betatim` 11 packages (https://pypi.org/user/betatim/):
+    https://pypi.org/project/binderhub
+    https://pypi.org/project/dockerspawner
+    https://pypi.org/project/jupyter-repo2docker
+    https://pypi.org/project/jupyter-server-proxy
+    https://pypi.org/project/jupyterhub
+    https://pypi.org/project/jupyterhub-idle-culler
+    https://pypi.org/project/jupyterhub-kubespawner/
+    https://pypi.org/project/jupyterhub-ltiauthenticator
+    https://pypi.org/project/jupyterhub-systemdspawner
+    https://pypi.org/project/jupyterhub-tmpauthenticator
+    https://pypi.org/project/jupyterhub-traefik-proxy
+`@willingc` 10 packages (https://pypi.org/user/willingc/):
+    https://pypi.org/project/binderhub
+    https://pypi.org/project/chartpress
+    https://pypi.org/project/dockerspawner
+    https://pypi.org/project/jupyter-alabaster-theme
+    https://pypi.org/project/jupyter-repo2docker
+    https://pypi.org/project/jupyterhub
+    https://pypi.org/project/jupyterhub-kubespawner/
+    https://pypi.org/project/jupyterhub-traefik-proxy
+    https://pypi.org/project/oauthenticator
+    https://pypi.org/project/sudospawner
+`@choldgraf` 10 packages (https://pypi.org/user/choldgraf/):
+    https://pypi.org/project/alabaster-jupyterhub
+    https://pypi.org/project/binderhub
+    https://pypi.org/project/jupyter-repo2docker
+    https://pypi.org/project/jupyterhub
+    https://pypi.org/project/jupyterhub-ltiauthenticator
+    https://pypi.org/project/jupyterhub-sphinx-theme
+    https://pypi.org/project/jupyterhub-systemdspawner
+    https://pypi.org/project/jupyterhub-tmpauthenticator
+    https://pypi.org/project/nbgitpuller
+    https://pypi.org/project/oauthenticator
+`@jasongrout` 7 packages (https://pypi.org/user/jasongrout/):
+    https://pypi.org/project/ipyleaflet
+    https://pypi.org/project/ipymidicontrols/
+    https://pypi.org/project/jupyterlab_launcher
+    https://pypi.org/project/pythreejs
+    https://pypi.org/project/sidecar
+    https://pypi.org/project/traittypes
+    https://pypi.org/project/voila
+`@maartenbreddels` 7 packages (https://pypi.org/user/maartenbreddels/):
+    https://pypi.org/project/hotpot_km
+    https://pypi.org/project/ipyleaflet
+    https://pypi.org/project/traittypes
+    https://pypi.org/project/voila
+    https://pypi.org/project/voila-gridstack
+    https://pypi.org/project/voila-material
+    https://pypi.org/project/voila-reveal
+`@takowl` 6 packages (https://pypi.org/user/takowl/):
+    https://pypi.org/project/echo_kernel
+    https://pypi.org/project/jupyterlab_launcher
+    https://pypi.org/project/pickleshare
+    https://pypi.org/project/qtconsole
+    https://pypi.org/project/sphinxcontrib_github_alt
+    https://pypi.org/project/testpath
+`@JohanMabille` 6 packages (https://pypi.org/user/JohanMabille/):
+    https://pypi.org/project/voila
+    https://pypi.org/project/voila-gridstack
+    https://pypi.org/project/voila-reveal
+    https://pypi.org/project/xeus-python
+    https://pypi.org/project/xeus-python-shell
+    https://pypi.org/project/xeus-robot
+`@jtp` 6 packages (https://pypi.org/user/jtp/):
+    https://pypi.org/project/jupyterlab-chat
+    https://pypi.org/project/retrolab
+    https://pypi.org/project/voici
+    https://pypi.org/project/voila
+    https://pypi.org/project/voila-gridstack
+    https://pypi.org/project/voila-reveal
+`@bgranger` 5 packages (https://pypi.org/user/bgranger/):
+    https://pypi.org/project/ipyleaflet
+    https://pypi.org/project/ipymidicontrols/
+    https://pypi.org/project/jupyter-alabaster-theme
+    https://pypi.org/project/jupyterlab_launcher
+    https://pypi.org/project/qtconsole
+`@mbussonn` 4 packages (https://pypi.org/user/mbussonn/):
+    https://pypi.org/project/jupyterlab_launcher
+    https://pypi.org/project/pickleshare
+    https://pypi.org/project/qtconsole
+    https://pypi.org/project/testpath
+`@trungleduc` 4 packages (https://pypi.org/user/trungleduc/):
+    https://pypi.org/project/voici
+    https://pypi.org/project/voila
+    https://pypi.org/project/voila-gridstack
+    https://pypi.org/project/voila-topbar
+`@agoose77` 4 packages (https://pypi.org/user/agoose77/):
+    https://pypi.org/project/hatch-deps-selector
+    https://pypi.org/project/jupyterlab-myst
+    https://pypi.org/project/mystmd
+    https://pypi.org/project/sphinx-ext-mystmd
+`@blink1073` 4 packages (https://pypi.org/user/blink1073/):
+    https://pypi.org/project/echo_kernel
+    https://pypi.org/project/ipympl
+    https://pypi.org/project/jupyterlab_launcher
+    https://pypi.org/project/retrolab
+`@sas` 4 packages (https://pypi.org/user/sas/):
+    https://pypi.org/project/binderhub
+    https://pypi.org/project/jupyter-remote-desktop-proxy
+    https://pypi.org/project/jupyter-repo2docker
+    https://pypi.org/project/nbgitpuller
+`@parente` 3 packages (https://pypi.org/user/parente/):
+    https://pypi.org/project/jupyter_dashboards/
+    https://pypi.org/project/jupyter_declarativewidgets/
+    https://pypi.org/project/jupyter_kernel_gateway_bundlers/
+`@rylo` 3 packages (https://pypi.org/user/rylo/):
+    https://pypi.org/project/jupyter-rsession-proxy
+    https://pypi.org/project/jupyter-server-proxy
+    https://pypi.org/project/nbgitpuller
+`@fperez` 3 packages (https://pypi.org/user/fperez/):
+    https://pypi.org/project/ipymidicontrols/
+    https://pypi.org/project/jupyterlab_launcher
+    https://pypi.org/project/qtconsole
+`@sgibson91` 3 packages (https://pypi.org/user/sgibson91/):
+    https://pypi.org/project/binderhub
+    https://pypi.org/project/dockerspawner
+    https://pypi.org/project/jupyter-repo2docker
+`@davidbrochart` 2 packages (https://pypi.org/user/davidbrochart/):
+    https://pypi.org/project/ipyleaflet
+    https://pypi.org/project/jupyverse
+`@stevejpurves` 2 packages (https://pypi.org/user/stevejpurves/):
+    https://pypi.org/project/myst-spec
+    https://pypi.org/project/mystmd
+`@fwkoch` 2 packages (https://pypi.org/user/fwkoch/):
+    https://pypi.org/project/myst-spec
+    https://pypi.org/project/mystmd
+`@javped` 2 packages (https://pypi.org/user/javped/):
+    https://pypi.org/project/jupyter_dashboards/
+    https://pypi.org/project/jupyter_declarativewidgets/
+`@lbustelo` 2 packages (https://pypi.org/user/lbustelo/):
+    https://pypi.org/project/jupyter_dashboards/
+    https://pypi.org/project/jupyter_declarativewidgets/
+`@jtyberg` 2 packages (https://pypi.org/user/jtyberg/):
+    https://pypi.org/project/jupyter_dashboards/
+    https://pypi.org/project/jupyter_declarativewidgets/
+`@Kyle.Kelley` 2 packages (https://pypi.org/user/Kyle.Kelley/):
+    https://pypi.org/project/jupyterhub-carina
+    https://pypi.org/project/qtconsole
+`@milligan` 2 packages (https://pypi.org/user/milligan/):
+    https://pypi.org/project/batchspawner
+    https://pypi.org/project/wrapspawner
+`@ianhi` 2 packages (https://pypi.org/user/ianhi/):
+    https://pypi.org/project/ipympl
+    https://pypi.org/project/sidecar
+`@jcrist` 2 packages (https://pypi.org/user/jcrist/):
+    https://pypi.org/project/jupyterhub-kerberosauthenticator
+    https://pypi.org/project/jupyterhub-yarnspawner
+`@vidartf` 2 packages (https://pypi.org/user/vidartf/):
+    https://pypi.org/project/hotpot_km
+    https://pypi.org/project/pythreejs
+`@darian` 2 packages (https://pypi.org/user/darian/):
+    https://pypi.org/project/jupyterlab_launcher
+    https://pypi.org/project/retrolab
+`@rowanc1` 2 packages (https://pypi.org/user/rowanc1/):
+    https://pypi.org/project/jupyterlab-myst
+    https://pypi.org/project/mystmd
+`@ebp-bot` 2 packages (https://pypi.org/user/ebp-bot/):
+    https://pypi.org/project/jupyterlab-myst
+    https://pypi.org/project/mystmd
+`@zsailer` 1 packages (https://pypi.org/user/zsailer/):
+    https://pypi.org/project/jupyverse
+`@lambdatotoro` 1 packages (https://pypi.org/user/lambdatotoro/):
+    https://pypi.org/project/jupyterhub-nativeauthenticator
+`@willirath` 1 packages (https://pypi.org/user/willirath/):
+    https://pypi.org/project/jupyterhub-firstuseauthenticator
+`@datalayer` 1 packages (https://pypi.org/user/datalayer/):
+    https://pypi.org/project/jupyter_markdown
+`@vivainio` 1 packages (https://pypi.org/user/vivainio/):
+    https://pypi.org/project/pickleshare
+`@dlq` 1 packages (https://pypi.org/user/dlq/):
+    https://pypi.org/project/jupyter-ai
+`@jhamrick` 1 packages (https://pypi.org/user/jhamrick/):
+    https://pypi.org/project/qtconsole
+`@ccordoba12` 1 packages (https://pypi.org/user/ccordoba12/):
+    https://pypi.org/project/qtconsole
+`@ivanov` 1 packages (https://pypi.org/user/ivanov/):
+    https://pypi.org/project/qtconsole
+`@irose` 1 packages (https://pypi.org/user/irose/):
+    https://pypi.org/project/jupyter-server-proxy
+`@GeorgianaElena` 1 packages (https://pypi.org/user/GeorgianaElena/):
+    https://pypi.org/project/jupyterhub-idle-culler
+`@dhirschfeld` 1 packages (https://pypi.org/user/dhirschfeld/):
+    https://pypi.org/project/jupyterhub-ldapauthenticator
+`@carolynvs` 1 packages (https://pypi.org/user/carolynvs/):
+    https://pypi.org/project/jupyterhub-carina
+`@mariobuikhuizen` 1 packages (https://pypi.org/user/mariobuikhuizen/):
+    https://pypi.org/project/voila-vuetify
+`@Sheila-nk` 1 packages (https://pypi.org/user/Sheila-nk/):
+    https://pypi.org/project/pytest-jupyterhub
+`@yannanjing` 1 packages (https://pypi.org/user/yannanjing/):
+    https://pypi.org/project/jupyterlab-data-explorer
+`@hbcarlos` 1 packages (https://pypi.org/user/hbcarlos/):
+    https://pypi.org/project/voila-gridstack
+`@fcollonval` 1 packages (https://pypi.org/user/fcollonval/):
+    https://pypi.org/project/jupyter-builder
+`@ronancoutinho03` 1 packages (https://pypi.org/user/ronancoutinho03/):
+    https://pypi.org/project/jupyter-builder
+`@itayd` 1 packages (https://pypi.org/user/itayd/):
+    https://pypi.org/project/ipydatagrid
+`@captainsafia` 1 packages (https://pypi.org/user/captainsafia/):
+    https://pypi.org/project/tmpnb
+`@cjsewell` 1 packages (https://pypi.org/user/cjsewell/):
+    https://pypi.org/project/jupyterlab-myst
+`@AbdealiJK` 1 packages (https://pypi.org/user/AbdealiJK/):
+    https://pypi.org/project/configurable-http-proxy
+`@corridor` 1 packages (https://pypi.org/user/corridor/):
+    https://pypi.org/project/configurable-http-proxy
+`@nbrichet` 1 packages (https://pypi.org/user/nbrichet/):
+    https://pypi.org/project/jupyterlab-chat
+`@Jonathan.Frederic` 1 packages (https://pypi.org/user/Jonathan.Frederic/):
+    https://pypi.org/project/jupyter-sphinx-theme
+Packages missing from github org, they are on PyPI, but I don't know the source github repo...:
+  https://pypi.org/project/jupyter-server-ydoc
+  https://pypi.org/project/jupyterlab-hdf
+  https://pypi.org/project/jupyterlab-katex
+  https://pypi.org/project/jupyterlab-mathjax2
+  https://pypi.org/project/jupyterlab-mathjax3
+  https://pypi.org/project/jupyterlab-pseudo-language-pack
+  https://pypi.org/project/jupyterlab-pullrequests
+  https://pypi.org/project/jupyterlab-vega2
+  https://pypi.org/project/jupyterlab-vega3
+listing all org and repo under jupyter purview, and filtering one without mathching github repos.
+
+check potentially matching Pypi names, all the following seem to correspond to an existing pypi package, if they indeed are part of Jupyter, you can copy past the lines as is in the config file. If not just append: `{org}/{repo}:`
+
+jupyter/debugger                          :  https://pypi.org/project/debugger (archived) 
+jupyter/experiments                       :  https://pypi.org/project/experiments (archived) 
+jupyter/kernels                           :  https://pypi.org/project/kernels (archived) 
+jupyter/markdown                          :  https://pypi.org/project/markdown  
+jupyter/newsletter                        :  https://pypi.org/project/newsletter (archived) 
+jupyter/practice                          :  https://pypi.org/project/practice  
+jupyter/roadmap                           :  https://pypi.org/project/roadmap  
+jupyter/schema                            :  https://pypi.org/project/schema  
+jupyter/services                          :  https://pypi.org/project/services (archived) 
+jupyter/showcase                          :  https://pypi.org/project/showcase (archived) 
+jupyter/spreadsheet                       :  https://pypi.org/project/spreadsheet (archived) 
+jupyter/telemetry                         :  https://pypi.org/project/telemetry  
+
+jupyter-book/blog                         :  https://pypi.org/project/blog  
+jupyter-book/meta                         :  https://pypi.org/project/meta  
+jupyter-book/thebe                        :  https://pypi.org/project/thebe  
+
+
+
+jupyter-server/council                    :  https://pypi.org/project/council  (private)
+
+jupyter-standards/schemas                 :  https://pypi.org/project/schemas (archived) 
+
+
+jupyter-xeus/xcanvas                      :  https://pypi.org/project/xcanvas  
+jupyter-xeus/xena                         :  https://pypi.org/project/xena  
+
+
+jupyterlab/benchmarks                     :  https://pypi.org/project/benchmarks  
+jupyterlab/council                        :  https://pypi.org/project/council  (private)
+jupyterlab/debugger                       :  https://pypi.org/project/debugger (archived) 
+jupyterlab/pull-requests                  :  https://pypi.org/project/pull-requests  
+
+
+
+repos with no Pypi package, either manually add `{org}/{repo}: {pypi_url}` or `{org}/{repo}: <blank>` to config file.
+
+https://github.com/jupyter/atom-notebook  
+https://github.com/jupyter/colaboratory (archived) 
+https://github.com/jupyter/conf-event-log (archived) 
+https://github.com/jupyter/cookiecutter-docker-stacks  
+https://github.com/jupyter/dashboards_bundlers (archived) 
+https://github.com/jupyter/dashboards_server (archived) 
+https://github.com/jupyter/dashboards_setup (archived) 
+https://github.com/jupyter/distinguished-contributors  
+https://github.com/jupyter/docker-demo-images (archived) 
+https://github.com/jupyter/docker-notebook (archived) 
+https://github.com/jupyter/docker-stacks  
+https://github.com/jupyter/drive-to-jupyter  (private)
+https://github.com/jupyter/enhancement-proposals  
+https://github.com/jupyter/etph (archived) 
+https://github.com/jupyter/extension-builder (archived) 
+https://github.com/jupyter/help (archived) 
+https://github.com/jupyter/ipython-py3k (archived) 
+https://github.com/jupyter/joss-papers (archived) 
+https://github.com/jupyter/jsplugins (archived) 
+https://github.com/jupyter/jupyter-blog-theme (archived) 
+https://github.com/jupyter/jupyter-communitycalls  
+https://github.com/jupyter/jupyter-drive  
+https://github.com/jupyter/jupyter-overview-paper  (private)
+https://github.com/jupyter/jupyter-sprints (archived) 
+https://github.com/jupyter/jupyter_client-ghsa-74qc-v7xc-xg6f  (private)
+https://github.com/jupyter/jupyter_core-ghsa-33p9-3p43-82vq  (private)
+https://github.com/jupyter/jupyter_logger (archived) 
+https://github.com/jupyter/jupytercon2023 (archived) 
+https://github.com/jupyter/jupytercon2023-private  (private)
+https://github.com/jupyter/jupyterhub-2016-workshop (archived) 
+https://github.com/jupyter/jupyterlab_json (archived) 
+https://github.com/jupyter/jvm-magics  
+https://github.com/jupyter/jvm-repr  
+https://github.com/jupyter/kernel-protocol  
+https://github.com/jupyter/kernel_gateway_demos  
+https://github.com/jupyter/lbnl-jupyterday (archived) 
+https://github.com/jupyter/mozfest15-training (archived) 
+https://github.com/jupyter/nature-demo (archived) 
+https://github.com/jupyter/nbcache (archived) 
+https://github.com/jupyter/nbconvert-examples  
+https://github.com/jupyter/nbindex (archived) 
+https://github.com/jupyter/nbmanager  
+https://github.com/jupyter/nbshot (archived) 
+https://github.com/jupyter/nbviewer-deploy (archived) (private)
+https://github.com/jupyter/notebook-ghsa-6rpp-pfgf-g9qj  (private)
+https://github.com/jupyter/notebook-load-tester (archived) (private)
+https://github.com/jupyter/notebook-research (archived) 
+https://github.com/jupyter/ops-handbook  (private)
+https://github.com/jupyter/phosphor-notebook (archived) 
+https://github.com/jupyter/project-mgt (archived) 
+https://github.com/jupyter/scipy-2015-advanced-topics (archived) 
+https://github.com/jupyter/scipy-sprint (archived) 
+https://github.com/jupyter/steering  (private)
+https://github.com/jupyter/surveys  
+https://github.com/jupyter/talks (archived) 
+https://github.com/jupyter/teaching-with-jupyter  (private)
+https://github.com/jupyter/test-grid (archived) 
+https://github.com/jupyter/tmpnb-deploy  
+https://github.com/jupyter/tmpnb-redirector (archived) 
+https://github.com/jupyter/trademark  (private)
+https://github.com/jupyter/try-jupyter  
+https://github.com/jupyter/win-tornado-terminals (archived) 
+
+https://github.com/jupyter-book/book-theme-tailwind-quickstart  
+https://github.com/jupyter-book/jupyterlab-myst-quickstart  
+https://github.com/jupyter-book/legacy-demo-book  
+https://github.com/jupyter-book/myst-enhancement-proposals  
+https://github.com/jupyter-book/myst-theme  
+https://github.com/jupyter-book/mystmd-quickstart  
+https://github.com/jupyter-book/vscode-mystmd  
+
+https://github.com/jupyter-governance/.github  
+https://github.com/jupyter-governance/jupyter-foundation-governing-board  
+https://github.com/jupyter-governance/jupytercon.com  (private)
+
+https://github.com/jupyter-incubator/contentmanagement (archived) 
+https://github.com/jupyter-incubator/declarativewidgets_explorer (archived) 
+https://github.com/jupyter-incubator/proposals (archived) 
+
+https://github.com/jupyter-server/contributing-hour  
+https://github.com/jupyter-server/enterprise_gateway  
+https://github.com/jupyter-server/enterprise_gateway-ghsa-rfrp-575h-4fh4  (private)
+https://github.com/jupyter-server/extension-cookiecutter  
+https://github.com/jupyter-server/message_replay  
+
+
+https://github.com/jupyter-widgets/widget-cookiecutter  
+https://github.com/jupyter-widgets/widget-ts-cookiecutter  
+
+https://github.com/jupyter-xeus/cpp-terminal  
+https://github.com/jupyter-xeus/xeus  
+https://github.com/jupyter-xeus/xeus-calc  
+https://github.com/jupyter-xeus/xeus-cling  
+https://github.com/jupyter-xeus/xeus-cookiecutter  
+https://github.com/jupyter-xeus/xeus-javascript  
+https://github.com/jupyter-xeus/xeus-lite  
+https://github.com/jupyter-xeus/xeus-lua  
+https://github.com/jupyter-xeus/xeus-nelson  
+https://github.com/jupyter-xeus/xeus-octave  
+https://github.com/jupyter-xeus/xeus-python-wheel  
+https://github.com/jupyter-xeus/xeus-qt  
+https://github.com/jupyter-xeus/xeus-qt-python  
+https://github.com/jupyter-xeus/xeus-r  
+https://github.com/jupyter-xeus/xeus-robot-wheel  
+https://github.com/jupyter-xeus/xeus-sql  
+https://github.com/jupyter-xeus/xeus-sqlite  
+https://github.com/jupyter-xeus/xeus-uv  
+https://github.com/jupyter-xeus/xeus-wren  
+https://github.com/jupyter-xeus/xeus-zmq  
+https://github.com/jupyter-xeus/xhale  
+https://github.com/jupyter-xeus/xleaflet  
+https://github.com/jupyter-xeus/xproperty  
+https://github.com/jupyter-xeus/xvega  
+https://github.com/jupyter-xeus/xvega-bindings  
+https://github.com/jupyter-xeus/xwidgets  
+
+https://github.com/jupyterhub/binder-billing  
+https://github.com/jupyterhub/binder-data  
+https://github.com/jupyterhub/grafana-dashboards  
+https://github.com/jupyterhub/helm-chart  
+https://github.com/jupyterhub/hubshare (archived) 
+https://github.com/jupyterhub/jhub-proposals (archived) 
+https://github.com/jupyterhub/jupyterhub-container-images  
+https://github.com/jupyterhub/jupyterhub-deploy-docker  
+https://github.com/jupyterhub/jupyterhub-deploy-hpc  
+https://github.com/jupyterhub/jupyterhub-deploy-teaching  
+https://github.com/jupyterhub/jupyterhub-example-kerberos (archived) 
+https://github.com/jupyterhub/jupyterhub-on-hadoop  
+https://github.com/jupyterhub/jupyterhub-python-repo-template  
+https://github.com/jupyterhub/jupyterhub-the-hard-way  
+https://github.com/jupyterhub/jupyterlab-hub (archived) 
+https://github.com/jupyterhub/katacoda-scenarios  
+https://github.com/jupyterhub/mybinder-tools  
+https://github.com/jupyterhub/nbgitpuller-downloader-plugins  
+https://github.com/jupyterhub/outreachy  
+https://github.com/jupyterhub/pebble-helm-chart  
+https://github.com/jupyterhub/repo2docker-action  
+https://github.com/jupyterhub/research-facilities (archived) 
+https://github.com/jupyterhub/the-littlest-jupyterhub  
+https://github.com/jupyterhub/zero-to-jupyterhub-k8s  
+
+https://github.com/jupyterlab/assets  
+https://github.com/jupyterlab/eslint-plugin-jinja (archived) 
+https://github.com/jupyterlab/extension-cookiecutter-js  
+https://github.com/jupyterlab/extension-cookiecutter-ts  
+https://github.com/jupyterlab/extension-examples  
+https://github.com/jupyterlab/extension-template  
+https://github.com/jupyterlab/galata (archived) 
+https://github.com/jupyterlab/jupyter-renderers  
+https://github.com/jupyterlab/jupyter-renderers-ghsa-rwvh-42j9-cm5c  (private)
+https://github.com/jupyterlab/jupytercon-jupyterlab-training  
+https://github.com/jupyterlab/jupyterlab-bot (archived) 
+https://github.com/jupyterlab/jupyterlab-celltags (archived) 
+https://github.com/jupyterlab/jupyterlab-commenting  
+https://github.com/jupyterlab/jupyterlab-demo  
+https://github.com/jupyterlab/jupyterlab-desktop  
+https://github.com/jupyterlab/jupyterlab-ghsa-8wpg-6g8h-9c64  (private)
+https://github.com/jupyterlab/jupyterlab-ghsa-jhmw-58jx-9v5h  (private)
+https://github.com/jupyterlab/jupyterlab-ghsa-m458-m2fg-hmjc  (private)
+https://github.com/jupyterlab/jupyterlab-ghsa-pfxp-q7w5-52p7  (private)
+https://github.com/jupyterlab/jupyterlab-google-drive (archived) 
+https://github.com/jupyterlab/jupyterlab-hdf5  
+https://github.com/jupyterlab/jupyterlab-media (archived) 
+https://github.com/jupyterlab/jupyterlab-metadata-service (archived) 
+https://github.com/jupyterlab/jupyterlab-module-federation (archived) 
+https://github.com/jupyterlab/jupyterlab-monaco (archived) 
+https://github.com/jupyterlab/jupyterlab-mp4 (archived) 
+https://github.com/jupyterlab/jupyterlab-probot  
+https://github.com/jupyterlab/jupyterlab-shortcutui (archived) 
+https://github.com/jupyterlab/jupyterlab-statusbar (archived) 
+https://github.com/jupyterlab/jupyterlab-toc (archived) 
+https://github.com/jupyterlab/jupyterlab_xkcd (archived) 
+https://github.com/jupyterlab/language-pack-cookiecutter  
+https://github.com/jupyterlab/maintainer-tools  
+https://github.com/jupyterlab/mimerender-cookiecutter (archived) 
+https://github.com/jupyterlab/mimerender-cookiecutter-ts (archived) 
+https://github.com/jupyterlab/richoutput-js  
+https://github.com/jupyterlab/runall-extension (archived) 
+https://github.com/jupyterlab/theme-cookiecutter (archived) 
+https://github.com/jupyterlab/ui-profiler  
+https://github.com/jupyterlab/ux-research  
+https://github.com/jupyterlab/vscode-config-template  
+
+https://github.com/voila-dashboards/tljh-voila-gallery  
+https://github.com/voila-dashboards/voici-demo  
+https://github.com/voila-dashboards/voici-gallery  
+https://github.com/voila-dashboards/voila-heroku  
+https://github.com/voila-dashboards/voila-huggingface  
+https://github.com/voila-dashboards/voila-railway  
+https://github.com/voila-dashboards/voila-template-cookiecutter  
+
+https://github.com/voila-gallery/cpp-xleaflet  
+https://github.com/voila-gallery/electricitymap_dashboard  
+https://github.com/voila-gallery/gaussian-density  
+https://github.com/voila-gallery/render-stl  
+https://github.com/voila-gallery/voila-spotify  
