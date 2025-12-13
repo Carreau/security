@@ -19,24 +19,33 @@ def save_graph(nodes: List[Dict[str, Any]], links: List[Dict[str, Any]], output_
 async def main_async(
     user: Optional[str],
     org: Optional[str],
+    package: Optional[str], # New parameter
     depth: int,
     output_file: str,
     batch_size: int,
 ):
     """
     Crawls PyPI to build a graph of maintainers and packages,
-    starting from a given user or organization.
+    starting from a given user, organization, or package.
     """
-    if not user and not org:
-        print("Error: Please provide either a --user or an --org to start crawling.")
+    # Validate starting point arguments
+    start_points = [arg for arg in [user, org, package] if arg is not None]
+    if len(start_points) == 0:
+        print("Error: Please provide either a --user, --org, or --package to start crawling.")
+        raise typer.Exit(code=1)
+    if len(start_points) > 1:
+        print("Error: Please provide only one of --user, --org, or --package.")
         raise typer.Exit(code=1)
 
-    if user and org:
-        print("Error: Please provide either a --user or an --org, not both.")
-        raise typer.Exit(code=1)
-
-    start_node_name = user if user else org
-    start_type = "user" if user else "org"
+    if user:
+        start_node_name = user
+        start_type = "user"
+    elif org:
+        start_node_name = org
+        start_type = "org"
+    else: # package
+        start_node_name = package
+        start_type = "package"
 
     print(f"Starting crawl at {start_type}: {start_node_name}")
     print(f"Crawling to a depth of: {depth}")
@@ -96,10 +105,16 @@ async def main_async(
             results = await asyncio.gather(*tasks)
 
             for idx, ((name, type), result_items) in enumerate(zip(entities_to_process, results)):
-                if type in ["user", "org"]:
+                if type == "user":
                     for package_name in result_items:
                         add_node(package_name, "package", maintainer_count=0, fetch_status="unfetched") # Add with initial status
                         add_link(name, type, package_name, "package")
+                        if (package_name, "package") not in visited:
+                            next_level_queue.append((package_name, "package"))
+                elif type == "org":
+                    for package_name in result_items:
+                        add_node(package_name, "package", maintainer_count=0, fetch_status="unfetched") # Add with initial status
+                        add_link(name, type, package_name, "package") # Explicitly link Org to Package
                         if (package_name, "package") not in visited:
                             next_level_queue.append((package_name, "package"))
                 elif type == "package":
@@ -155,12 +170,13 @@ async def main_async(
 def main_cli(
     user: Optional[str] = typer.Option(None, "--user", help="The initial user to start crawling from."),
     org: Optional[str] = typer.Option(None, "--org", help="The initial organization to start crawling from."),
+    package: Optional[str] = typer.Option(None, "--package", help="The initial package to start crawling from."), # New option
     depth: int = typer.Option(3, "--depth", help="The maximum depth to crawl."),
     output_file: str = typer.Option("pypi-graph-viewer/graph.json", "--output", help="The output file for the graph data."),
     batch_size: int = typer.Option(10, "--batch-size", help="Number of concurrent requests to make."),
 ):
     """Wrapper to run the async main function."""
-    asyncio.run(main_async(user, org, depth, output_file, batch_size))
+    asyncio.run(main_async(user, org, package, depth, output_file, batch_size))
 
 if __name__ == "__main__":
     app()
