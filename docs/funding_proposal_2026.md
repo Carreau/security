@@ -36,11 +36,12 @@ This is not a reflection of maintainer negligence — it is a resourcing gap.
 Security work is specialized, time-sensitive, and difficult to do well in
 occasional spare moments.
 
-## time sensitivity
+## Time sensitivity
 
 Some reports are forwarded via platforms (huntr.com as one of the example), and
 are usually automatically published after a grace period with or without
-response from maintainer, in 2026 the Jupyter Project had sor far 8 reports,
+response from maintainer, in 2026 the Jupyter Project had so far 8 reports
+on huntr alone,
 some of them actual vulnerabilities that have not yet receive proper review, nor
 patches.
 
