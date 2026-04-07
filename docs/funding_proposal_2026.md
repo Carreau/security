@@ -74,8 +74,7 @@ proposal is approved and logistics are in place.
 - Complex fixes requiring deep involvement from subproject maintainers
 - Dependency auditing across all repositories (could be a future expansion)
 
-While out of scope if times permit, more security related work could be done by
-the contributor.
+While out of scope if times permit, more security related work could be done by the contributor.
 
 ### Possible Extension: Trademark Review
 
@@ -151,6 +150,7 @@ program against these concrete outcomes:
 - **Transparency:** A brief monthly summary is shared with the Executive Council
   documenting volume of reports, resolution status, and any systemic issues
   identified.
+- **Reporting** : activity reports to https://github.com/jupyter/cve/issues.
 
 ## After the Pilot
 
@@ -171,3 +171,4 @@ resourcing.
 *Submitted by: [your name]*
 *Date: [date]*
 *Contact: [email]*
+
