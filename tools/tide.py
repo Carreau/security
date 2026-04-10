@@ -22,7 +22,7 @@ import asyncio
 from pathlib import Path
 from textual.app import ComposeResult, App
 from textual.containers import Container, Vertical
-from textual.widgets import DataTable, Footer, Header
+from textual.widgets import DataTable, Footer, Header, Input
 from textual.binding import Binding
 from rich.text import Text
 import typer
@@ -143,7 +143,7 @@ def save_packages_cache(url: str, packages: list[str]):
 
 def get_top_packages_cache(limit: int) -> list[str] | None:
     """Get cached top packages list."""
-    cache_file = CACHE_DIR / f"top_packages_{limit}.json"
+    cache_file = CACHE_DIR / "top_packages.json"
     if not cache_file.exists():
         return None
 
@@ -152,15 +152,17 @@ def get_top_packages_cache(limit: int) -> list[str] | None:
             data = json.load(f)
         timestamp = data.get("cache_timestamp", 0)
         if datetime.now().timestamp() - timestamp < CACHE_TTL_SECONDS:
-            return data.get("packages")
+            packages = data.get("packages")
+            if packages and len(packages) >= limit:
+                return packages[:limit]
     except (json.JSONDecodeError, KeyError):
         pass
     return None
 
 
-def save_top_packages_cache(limit: int, packages: list[str]):
+def save_top_packages_cache(packages: list[str]):
     """Save top packages list to cache."""
-    cache_file = CACHE_DIR / f"top_packages_{limit}.json"
+    cache_file = CACHE_DIR / "top_packages.json"
     with open(cache_file, "w") as f:
         json.dump(
             {
@@ -293,10 +295,10 @@ async def get_top_packages(limit: int = 500) -> list[str]:
             response = await client.get(url, timeout=10)
             response.raise_for_status()
             data = response.json()
-        packages = [pkg["project"] for pkg in data["rows"][:limit]]
-        print(f"Successfully fetched {len(packages)} top packages")
-        save_top_packages_cache(limit, packages)
-        return packages
+        all_packages = [pkg["project"] for pkg in data["rows"]]
+        print(f"Successfully fetched {len(all_packages)} top packages")
+        save_top_packages_cache(all_packages)
+        return all_packages[:limit]
     except Exception as e:
         print(f"Failed to fetch top packages: {e}")
         return []
@@ -497,24 +499,62 @@ async def fetch_release_times(
     return release_times
 
 
+def get_repo_url(package_name: str) -> str:
+    """Extract repository URL from cached PyPI data."""
+    data = get_cached_pypi_response(package_name)
+    if not data:
+        return ""
+    project_urls = data.get("info", {}).get("project_urls") or {}
+    # Normalize keys to lowercase for matching
+    urls_lower = {k.lower(): v for k, v in project_urls.items()}
+    for key in ("source", "source code", "repository", "github", "code", "homepage"):
+        url = urls_lower.get(key, "")
+        if "github.com" in url or "gitlab.com" in url or "codeberg.org" in url or "bitbucket.org" in url:
+            return url
+    # Fallback: any project_url pointing to a known forge
+    for url in project_urls.values():
+        if url and ("github.com" in url or "gitlab.com" in url or "codeberg.org" in url or "bitbucket.org" in url):
+            return url
+    # Fallback: check home_page
+    homepage = data.get("info", {}).get("home_page", "") or ""
+    if "github.com" in homepage or "gitlab.com" in homepage:
+        return homepage
+    return ""
+
+
 async def get_tidelift_data(packages, only_liftable=False):
     """Fetch tidelift data and return enriched package information."""
     # Check cache first
     cached = get_tidelift_cache(packages)
     if cached:
         print(f"[CACHE HIT] Tidelift data for {len(packages)} packages")
+        # Ensure PyPI data is fetched for repo_url backfill
+        names_needing_pypi = [item["name"] for item in cached if not item.get("repo_url")]
+        if names_needing_pypi:
+            await fetch_release_times(names_needing_pypi)
+            for item in cached:
+                if not item.get("repo_url"):
+                    item["repo_url"] = get_repo_url(item["name"])
         return cached
 
     print(f"[API REQUEST] Fetching Tidelift data for {len(packages)} packages...")
-    packages_data = [{"platform": "pypi", "name": h3} for h3 in packages]
 
-    data = {"packages": packages_data}
+    # Batch requests to avoid API limits
+    BATCH_SIZE = 500
+    response_data = []
     async with httpx.AsyncClient() as client:
-        res = await client.post(
-            "https://tidelift.com/api/depci/estimate/bulk_estimates", json=data
-        )
-        res.raise_for_status()
-        response_data = res.json()
+        for i in range(0, len(packages), BATCH_SIZE):
+            batch = packages[i:i + BATCH_SIZE]
+            packages_data = [{"platform": "pypi", "name": h3} for h3 in batch]
+            data = {"packages": packages_data}
+            res = await client.post(
+                "https://tidelift.com/api/depci/estimate/bulk_estimates", json=data,
+                timeout=30,
+            )
+            res.raise_for_status()
+            response_data.extend(res.json())
+            if i + BATCH_SIZE < len(packages):
+                print(f"  Fetched {min(i + BATCH_SIZE, len(packages))}/{len(packages)}...")
 
     # Collecting all package data
     package_data = []
@@ -559,12 +599,38 @@ async def get_tidelift_data(packages, only_liftable=False):
                 "estimated_money": estimated_money,
                 "last_release": release_display,
                 "last_release_timestamp": release_timestamp,
+                "repo_url": get_repo_url(name),
             }
         )
 
     # Save to cache
     save_tidelift_cache(packages, result)
     return result
+
+
+def print_csv(data: list[dict]) -> None:
+    """Print package data as CSV to stdout."""
+    import csv as csv_mod
+    import io
+
+    output = io.StringIO()
+    writer = csv_mod.writer(output, lineterminator="\n")
+    writer.writerow(["name", "url", "estimated_money", "lifted", "last_release", "repo_url"])
+    for item in data:
+        ts = item.get("last_release_timestamp")
+        if ts and ts != float("inf"):
+            release = datetime.fromtimestamp(ts).date().isoformat()
+        else:
+            release = ""
+        writer.writerow([
+            item["name"],
+            f"https://pypi.org/project/{item['name']}",
+            item.get("estimated_money", ""),
+            item.get("lifted", ""),
+            release,
+            item.get("repo_url", ""),
+        ])
+    sys.stdout.write(output.getvalue())
 
 
 def print_table(data: list[dict]) -> None:
@@ -576,6 +642,7 @@ def print_table(data: list[dict]) -> None:
     table.add_column("Estimated Money")
     table.add_column("Lifted")
     table.add_column("Last Release")
+    table.add_column("Repo")
 
     def maybefloat(x):
         if x is None:
@@ -618,6 +685,7 @@ def print_table(data: list[dict]) -> None:
             money_str,
             f"[green]{lifted_str}[/green]" if lifted_str == "✓" else f"[red]{lifted_str}[/red]",
             f"[{release_style}]{item['last_release']}[/{release_style}]",
+            item.get("repo_url", ""),
         )
 
     print(table)
@@ -626,12 +694,21 @@ def print_table(data: list[dict]) -> None:
 class TideApp(App):
     """Textual app for viewing Tidelift package data."""
 
+    CSS = """
+    .hidden {
+        display: none;
+    }
+    """
+
     BINDINGS = [
         Binding("q", "quit", "Quit"),
         Binding("s", "sort_lifted", "Sort by Lifted"),
         Binding("m", "sort_money", "Sort by Money"),
         Binding("n", "sort_name", "Sort by Name"),
         Binding("l", "sort_release", "Sort by Release"),
+        Binding("r", "sort_repo", "Sort by Repo"),
+        Binding("/", "focus_search", "Search"),
+        Binding("escape", "clear_search", "Clear Search"),
     ]
 
     def __init__(self, data: list[dict]):
@@ -639,10 +716,12 @@ class TideApp(App):
         self.data = data
         self.sort_column = None
         self.sort_reverse = False
+        self.filter_text = ""
 
     def compose(self) -> ComposeResult:
         """Create child widgets."""
         yield Header()
+        yield Input(placeholder="Filter packages...", id="search", classes="hidden")
         yield DataTable(id="packages-table")
         yield Footer()
 
@@ -654,6 +733,7 @@ class TideApp(App):
         table.add_column("Lifted", key="lifted")
         table.add_column("Estimated Money", key="estimated_money")
         table.add_column("Last Release", key="last_release")
+        table.add_column("Repo", key="repo_url")
         self.populate_table()
 
     def populate_table(self) -> None:
@@ -696,10 +776,23 @@ class TideApp(App):
                 Text(lifted_str, style=lifted_style),
                 Text(money_str, style=money_style),
                 Text(release_str, style=release_style),
+                item.get("repo_url", ""),
             )
 
+    def get_filtered_data(self) -> list[dict]:
+        """Filter data based on search text."""
+        if not self.filter_text:
+            return self.data
+        q = self.filter_text.lower()
+        return [
+            item for item in self.data
+            if q in item["name"].lower()
+            or q in item.get("repo_url", "").lower()
+        ]
+
     def get_sorted_data(self) -> list[dict]:
-        """Get sorted package data."""
+        """Get filtered and sorted package data."""
+        data = self.get_filtered_data()
 
         def maybefloat(x):
             if x is None:
@@ -711,7 +804,7 @@ class TideApp(App):
 
         if self.sort_column == "lifted":
             sorted_data = sorted(
-                self.data,
+                data,
                 key=lambda x: (
                     x["lifted"] is None,
                     x["lifted"] is False,
@@ -721,21 +814,26 @@ class TideApp(App):
             )
         elif self.sort_column == "money":
             sorted_data = sorted(
-                self.data,
+                data,
                 key=lambda x: (maybefloat(x["estimated_money"]), x["name"]),
                 reverse=not self.sort_reverse,
             )
         elif self.sort_column == "release":
-            # Sort by release timestamp (much simpler!)
             sorted_data = sorted(
-                self.data,
+                data,
                 key=lambda x: (x["last_release_timestamp"], x["name"]),
                 reverse=not self.sort_reverse,
+            )
+        elif self.sort_column == "repo":
+            sorted_data = sorted(
+                data,
+                key=lambda x: (x.get("repo_url", ""), x["name"]),
+                reverse=self.sort_reverse,
             )
         else:
             # Default sort: by lifted, then money, then name
             sorted_data = sorted(
-                self.data,
+                data,
                 key=lambda x: (
                     x["lifted"] is None,
                     x["lifted"] is False,
@@ -780,6 +878,36 @@ class TideApp(App):
         else:
             self.sort_column = "release"
             self.sort_reverse = False
+        self.populate_table()
+
+    def action_sort_repo(self) -> None:
+        """Sort by repo URL."""
+        if self.sort_column == "repo":
+            self.sort_reverse = not self.sort_reverse
+        else:
+            self.sort_column = "repo"
+            self.sort_reverse = False
+        self.populate_table()
+
+    def action_focus_search(self) -> None:
+        """Show and focus the search input."""
+        search = self.query_one("#search", Input)
+        search.remove_class("hidden")
+        search.value = ""
+        self.call_later(search.focus)
+
+    def action_clear_search(self) -> None:
+        """Clear search, hide input, and refocus table."""
+        search = self.query_one("#search", Input)
+        search.value = ""
+        search.add_class("hidden")
+        self.filter_text = ""
+        self.populate_table()
+        self.query_one(DataTable).focus()
+
+    def on_input_changed(self, event: Input.Changed) -> None:
+        """Filter table when search input changes."""
+        self.filter_text = event.value
         self.populate_table()
 
 
@@ -863,10 +991,12 @@ async def fetch_all_data(
 def main(
     org: Optional[str] = typer.Option(None, "--org", help="PyPI organization name"),
     user: Optional[str] = typer.Option(None, "--user", help="PyPI user name"),
-    packages: Optional[List[str]] = typer.Option(None, "--packages", help="Package names"),
+    packages: Optional[List[str]] = typer.Argument(None, help="Package names"),
     top: Optional[int] = typer.Option(None, "--top", help="Fetch top N most downloaded packages (default 500)"),
     only_liftable: bool = typer.Option(False, "--only-liftable", help="Show only liftable packages"),
+    trim_lifted: bool = typer.Option(False, "--trim-lifted", help="Exclude already lifted packages"),
     app: bool = typer.Option(False, "--app", help="Launch interactive TUI"),
+    csv: bool = typer.Option(False, "--csv", help="Output as CSV"),
     clear_cache_flag: bool = typer.Option(False, "--clear-cache", help="Clear all cached data and exit"),
 ):
     """Analyze Tidelift package lift status and release dates."""
@@ -877,8 +1007,13 @@ def main(
     # Fetch all data in an async context
     data = asyncio.run(fetch_all_data(org, user, packages, top, only_liftable))
 
+    if trim_lifted:
+        data = [item for item in data if item.get("lifted") is not True]
+
     # Launch app or print table (both are blocking/sync)
-    if app:
+    if csv:
+        print_csv(data)
+    elif app:
         tui_app = TideApp(data)
         tui_app.run()
     else:

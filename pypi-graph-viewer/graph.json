@@ -374,588 +374,588 @@
       "name": "jupyterlab-language-pack-de-DE",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-git",
       "name": "jupyterlab-git",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterhub-sphinx-theme",
       "name": "jupyterhub-sphinx-theme",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-widgets",
       "name": "jupyterlab-widgets",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 7,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:litegitpuller",
       "name": "litegitpuller",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-hdf",
       "name": "jupyterlab-hdf",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterhub-yarnspawner",
       "name": "jupyterhub-yarnspawner",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab",
       "name": "jupyterlab",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterhub-hmacauthenticator",
       "name": "jupyterhub-hmacauthenticator",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-language-pack-zh-TW",
       "name": "jupyterlab-language-pack-zh-TW",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:sphinx-ext-mystmd",
       "name": "sphinx-ext-mystmd",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-language-pack-hu-HU",
       "name": "jupyterlab-language-pack-hu-HU",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterhub-nativeauthenticator",
       "name": "jupyterhub-nativeauthenticator",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-language-pack-it-IT",
       "name": "jupyterlab-language-pack-it-IT",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-geojson",
       "name": "jupyterlab-geojson",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:tmpnb",
       "name": "tmpnb",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterdrive",
       "name": "jupyterdrive",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:traitlets",
       "name": "traitlets",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 12,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-language-pack-ru-RU",
       "name": "jupyterlab-language-pack-ru-RU",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-chat",
       "name": "jupyterlab-chat",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterhub-tmpauthenticator",
       "name": "jupyterhub-tmpauthenticator",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 5,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:pycrdt-websocket",
       "name": "pycrdt-websocket",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:docker-image-cleaner",
       "name": "docker-image-cleaner",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-language-pack-ar-SA",
       "name": "jupyterlab-language-pack-ar-SA",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-language-pack-hy-AM",
       "name": "jupyterlab-language-pack-hy-AM",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-language-pack-ca-ES",
       "name": "jupyterlab-language-pack-ca-ES",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:escapism",
       "name": "escapism",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:nbresuse",
       "name": "nbresuse",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 6,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:ipython_genutils",
       "name": "ipython_genutils",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 5,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:nbgitpuller-downloader-googledrive",
       "name": "nbgitpuller-downloader-googledrive",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyter-scheduler",
       "name": "jupyter-scheduler",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyter_kernel_gateway_bundlers",
       "name": "jupyter_kernel_gateway_bundlers",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-language-pack-ro-RO",
       "name": "jupyterlab-language-pack-ro-RO",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyter-server",
       "name": "jupyter-server",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 8,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-language-pack-ko-KR",
       "name": "jupyterlab-language-pack-ko-KR",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-language-pack-nl-NL",
       "name": "jupyterlab-language-pack-nl-NL",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-myst",
       "name": "jupyterlab-myst",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:nb2kg",
       "name": "nb2kg",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyter_cms",
       "name": "jupyter_cms",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-language-pack-pt-BR",
       "name": "jupyterlab-language-pack-pt-BR",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:nbformat",
       "name": "nbformat",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 13,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:ipyleaflet",
       "name": "ipyleaflet",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 6,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:ipython",
       "name": "ipython",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 8,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyter-repo2docker",
       "name": "jupyter-repo2docker",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 9,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyter-smart-on-fhir",
       "name": "jupyter-smart-on-fhir",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:simpervisor",
       "name": "simpervisor",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterhub-carina",
       "name": "jupyterhub-carina",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyter-alabaster-theme",
       "name": "jupyter-alabaster-theme",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyverse",
       "name": "jupyverse",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterhealth-client",
       "name": "jupyterhealth-client",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterhub-firstuseauthenticator",
       "name": "jupyterhub-firstuseauthenticator",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 5,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyter-kernel-test",
       "name": "jupyter-kernel-test",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:notebook-shim",
       "name": "notebook-shim",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:comm",
       "name": "comm",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:voici-core",
       "name": "voici-core",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:xeus-python-shell",
       "name": "xeus-python-shell",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-pullrequests",
       "name": "jupyterlab-pullrequests",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:voila",
       "name": "voila",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 7,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-language-pack-fi-FI",
       "name": "jupyterlab-language-pack-fi-FI",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:nbgrader",
       "name": "nbgrader",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-github",
       "name": "jupyterlab-github",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-launcher",
       "name": "jupyterlab-launcher",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 8,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:ipython-pygments-lexers",
       "name": "ipython-pygments-lexers",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlite-xeus",
       "name": "jupyterlite-xeus",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-vega2",
       "name": "jupyterlab-vega2",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyter-console",
       "name": "jupyter-console",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 9,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:notebook",
       "name": "notebook",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 18,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:pytest-check-links",
       "name": "pytest-check-links",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:wrapspawner",
       "name": "wrapspawner",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterhub-simplespawner",
       "name": "jupyterhub-simplespawner",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:ipywidgets",
       "name": "ipywidgets",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 10,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-language-pack-lt-LT",
       "name": "jupyterlab-language-pack-lt-LT",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyter-server-ydoc",
       "name": "jupyter-server-ydoc",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 7,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-language-pack-uk-UA",
       "name": "jupyterlab-language-pack-uk-UA",
       "type": "package",
       "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlite-terminal",
       "name": "jupyterlite-terminal",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:nbclient",
       "name": "nbclient",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:nbviewer",
       "name": "nbviewer",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 11,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:ipykernel",
       "name": "ipykernel",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 9,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:voici",
       "name": "voici",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 3,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlite-core",
       "name": "jupyterlite-core",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:papyri",
       "name": "papyri",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 1,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:matplotlib-inline",
       "name": "matplotlib-inline",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 4,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyter",
       "name": "jupyter",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 8,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:jupyterlab-pseudo-language-pack",
       "name": "jupyterlab-pseudo-language-pack",
       "type": "package",
-      "maintainer_count": 0,
-      "fetch_status": "unfetched"
+      "maintainer_count": 2,
+      "fetch_status": "fetched"
     },
     {
       "id": "package:sphinxcontrib_github_alt",
@@ -1659,6 +1659,121 @@
     {
       "id": "user:dlq",
       "name": "dlq",
+      "type": "user"
+    },
+    {
+      "id": "user:itayd",
+      "name": "itayd",
+      "type": "user"
+    },
+    {
+      "id": "user:huderl",
+      "name": "huderl",
+      "type": "user"
+    },
+    {
+      "id": "user:lambdatotoro",
+      "name": "lambdatotoro",
+      "type": "user"
+    },
+    {
+      "id": "user:captainsafia",
+      "name": "captainsafia",
+      "type": "user"
+    },
+    {
+      "id": "user:kestert",
+      "name": "kestert",
+      "type": "user"
+    },
+    {
+      "id": "user:rmorshea",
+      "name": "rmorshea",
+      "type": "user"
+    },
+    {
+      "id": "user:Jonathan.Frederic",
+      "name": "Jonathan.Frederic",
+      "type": "user"
+    },
+    {
+      "id": "user:krinsman",
+      "name": "krinsman",
+      "type": "user"
+    },
+    {
+      "id": "user:ryanlovett",
+      "name": "ryanlovett",
+      "type": "user"
+    },
+    {
+      "id": "user:3coins",
+      "name": "3coins",
+      "type": "user"
+    },
+    {
+      "id": "user:andrii-i",
+      "name": "andrii-i",
+      "type": "user"
+    },
+    {
+      "id": "user:rowanc1",
+      "name": "rowanc1",
+      "type": "user"
+    },
+    {
+      "id": "user:ebp-bot",
+      "name": "ebp-bot",
+      "type": "user"
+    },
+    {
+      "id": "user:javped",
+      "name": "javped",
+      "type": "user"
+    },
+    {
+      "id": "user:goanpeca",
+      "name": "goanpeca",
+      "type": "user"
+    },
+    {
+      "id": "user:trallard",
+      "name": "trallard",
+      "type": "user"
+    },
+    {
+      "id": "user:carolynvs",
+      "name": "carolynvs",
+      "type": "user"
+    },
+    {
+      "id": "user:willirath",
+      "name": "willirath",
+      "type": "user"
+    },
+    {
+      "id": "user:trungleduc",
+      "name": "trungleduc",
+      "type": "user"
+    },
+    {
+      "id": "user:DerThorsten",
+      "name": "DerThorsten",
+      "type": "user"
+    },
+    {
+      "id": "user:gnestor",
+      "name": "gnestor",
+      "type": "user"
+    },
+    {
+      "id": "user:hbcarlos",
+      "name": "hbcarlos",
+      "type": "user"
+    },
+    {
+      "id": "user:ianthomas23",
+      "name": "ianthomas23",
       "type": "user"
     }
   ],
@@ -3090,6 +3205,1098 @@
     {
       "source": "package:jupyter-server-fileid",
       "target": "user:dlq"
+    },
+    {
+      "source": "package:jupyterhub-sphinx-theme",
+      "target": "user:jupyterhub-bot"
+    },
+    {
+      "source": "package:jupyterhub-sphinx-theme",
+      "target": "user:consideRatio"
+    },
+    {
+      "source": "package:jupyterhub-sphinx-theme",
+      "target": "user:choldgraf"
+    },
+    {
+      "source": "package:jupyterhub-sphinx-theme",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyterlab-widgets",
+      "target": "user:maartenbreddels"
+    },
+    {
+      "source": "package:jupyterlab-widgets",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:jupyterlab-widgets",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyterlab-widgets",
+      "target": "user:itayd"
+    },
+    {
+      "source": "package:jupyterlab-widgets",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:jupyterlab-widgets",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:jupyterlab-widgets",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:litegitpuller",
+      "target": "user:nbrichet"
+    },
+    {
+      "source": "package:jupyterlab-hdf",
+      "target": "user:huderl"
+    },
+    {
+      "source": "package:jupyterhub-yarnspawner",
+      "target": "user:jcrist"
+    },
+    {
+      "source": "package:jupyterhub-hmacauthenticator",
+      "target": "user:yuvipanda"
+    },
+    {
+      "source": "package:jupyterhub-hmacauthenticator",
+      "target": "user:consideRatio"
+    },
+    {
+      "source": "package:jupyterhub-hmacauthenticator",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:sphinx-ext-mystmd",
+      "target": "user:agoose77"
+    },
+    {
+      "source": "package:jupyterhub-nativeauthenticator",
+      "target": "user:lambdatotoro"
+    },
+    {
+      "source": "package:jupyterhub-nativeauthenticator",
+      "target": "user:consideRatio"
+    },
+    {
+      "source": "package:jupyterhub-nativeauthenticator",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:tmpnb",
+      "target": "user:captainsafia"
+    },
+    {
+      "source": "package:tmpnb",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyterdrive",
+      "target": "user:kestert"
+    },
+    {
+      "source": "package:jupyterdrive",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:jupyterdrive",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyterdrive",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:rmorshea"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:zsailer"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:Jonathan.Frederic"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:kevin-bates"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:blink1073"
+    },
+    {
+      "source": "package:traitlets",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:jupyterlab-chat",
+      "target": "user:jtp"
+    },
+    {
+      "source": "package:jupyterlab-chat",
+      "target": "user:nbrichet"
+    },
+    {
+      "source": "package:jupyterhub-tmpauthenticator",
+      "target": "user:yuvipanda"
+    },
+    {
+      "source": "package:jupyterhub-tmpauthenticator",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyterhub-tmpauthenticator",
+      "target": "user:consideRatio"
+    },
+    {
+      "source": "package:jupyterhub-tmpauthenticator",
+      "target": "user:choldgraf"
+    },
+    {
+      "source": "package:jupyterhub-tmpauthenticator",
+      "target": "user:betatim"
+    },
+    {
+      "source": "package:pycrdt-websocket",
+      "target": "user:davidbrochart"
+    },
+    {
+      "source": "package:pycrdt-websocket",
+      "target": "user:zsailer"
+    },
+    {
+      "source": "package:docker-image-cleaner",
+      "target": "user:jupyterhub-bot"
+    },
+    {
+      "source": "package:docker-image-cleaner",
+      "target": "user:consideRatio"
+    },
+    {
+      "source": "package:docker-image-cleaner",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:escapism",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:nbresuse",
+      "target": "user:yuvipanda"
+    },
+    {
+      "source": "package:nbresuse",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:nbresuse",
+      "target": "user:krinsman"
+    },
+    {
+      "source": "package:nbresuse",
+      "target": "user:jtp"
+    },
+    {
+      "source": "package:nbresuse",
+      "target": "user:betatim"
+    },
+    {
+      "source": "package:nbresuse",
+      "target": "user:ryanlovett"
+    },
+    {
+      "source": "package:ipython_genutils",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:ipython_genutils",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:ipython_genutils",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:ipython_genutils",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:ipython_genutils",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:nbgitpuller-downloader-googledrive",
+      "target": "user:jupyterhub-bot"
+    },
+    {
+      "source": "package:nbgitpuller-downloader-googledrive",
+      "target": "user:consideRatio"
+    },
+    {
+      "source": "package:nbgitpuller-downloader-googledrive",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyter-scheduler",
+      "target": "user:3coins"
+    },
+    {
+      "source": "package:jupyter-scheduler",
+      "target": "user:andrii-i"
+    },
+    {
+      "source": "package:jupyter-scheduler",
+      "target": "user:dlq"
+    },
+    {
+      "source": "package:jupyter-scheduler",
+      "target": "user:zsailer"
+    },
+    {
+      "source": "package:jupyter_kernel_gateway_bundlers",
+      "target": "user:parente"
+    },
+    {
+      "source": "package:jupyter-server",
+      "target": "user:jasongrout"
+    },
+    {
+      "source": "package:jupyter-server",
+      "target": "user:davidbrochart"
+    },
+    {
+      "source": "package:jupyter-server",
+      "target": "user:darian"
+    },
+    {
+      "source": "package:jupyter-server",
+      "target": "user:kevin-bates"
+    },
+    {
+      "source": "package:jupyter-server",
+      "target": "user:zsailer"
+    },
+    {
+      "source": "package:jupyter-server",
+      "target": "user:jtp"
+    },
+    {
+      "source": "package:jupyter-server",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:jupyter-server",
+      "target": "user:datalayer"
+    },
+    {
+      "source": "package:jupyterlab-myst",
+      "target": "user:rowanc1"
+    },
+    {
+      "source": "package:jupyterlab-myst",
+      "target": "user:ebp-bot"
+    },
+    {
+      "source": "package:jupyterlab-myst",
+      "target": "user:agoose77"
+    },
+    {
+      "source": "package:nb2kg",
+      "target": "user:kevin-bates"
+    },
+    {
+      "source": "package:nb2kg",
+      "target": "user:parente"
+    },
+    {
+      "source": "package:nb2kg",
+      "target": "user:lresende"
+    },
+    {
+      "source": "package:jupyter_cms",
+      "target": "user:lbustelo"
+    },
+    {
+      "source": "package:jupyter_cms",
+      "target": "user:jtyberg"
+    },
+    {
+      "source": "package:jupyter_cms",
+      "target": "user:javped"
+    },
+    {
+      "source": "package:jupyter_cms",
+      "target": "user:parente"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:goanpeca"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:mpacer"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:MSeal"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:mdpacer"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:nbformat",
+      "target": "user:jhamrick"
+    },
+    {
+      "source": "package:ipyleaflet",
+      "target": "user:jasongrout"
+    },
+    {
+      "source": "package:ipyleaflet",
+      "target": "user:davidbrochart"
+    },
+    {
+      "source": "package:ipyleaflet",
+      "target": "user:maartenbreddels"
+    },
+    {
+      "source": "package:ipyleaflet",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:ipyleaflet",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:ipyleaflet",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:krassowski"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:trallard"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:ipython",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:jupyter-repo2docker",
+      "target": "user:yuvipanda"
+    },
+    {
+      "source": "package:jupyter-repo2docker",
+      "target": "user:jupyterhub-bot"
+    },
+    {
+      "source": "package:jupyter-repo2docker",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyter-repo2docker",
+      "target": "user:consideRatio"
+    },
+    {
+      "source": "package:jupyter-repo2docker",
+      "target": "user:choldgraf"
+    },
+    {
+      "source": "package:jupyter-repo2docker",
+      "target": "user:betatim"
+    },
+    {
+      "source": "package:jupyter-repo2docker",
+      "target": "user:sgibson91"
+    },
+    {
+      "source": "package:jupyter-repo2docker",
+      "target": "user:willingc"
+    },
+    {
+      "source": "package:jupyter-repo2docker",
+      "target": "user:sas"
+    },
+    {
+      "source": "package:jupyter-smart-on-fhir",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:simpervisor",
+      "target": "user:yuvipanda"
+    },
+    {
+      "source": "package:simpervisor",
+      "target": "user:jupyterhub-bot"
+    },
+    {
+      "source": "package:simpervisor",
+      "target": "user:consideRatio"
+    },
+    {
+      "source": "package:simpervisor",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyterhub-carina",
+      "target": "user:carolynvs"
+    },
+    {
+      "source": "package:jupyterhub-carina",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyterhub-carina",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:jupyter-alabaster-theme",
+      "target": "user:willingc"
+    },
+    {
+      "source": "package:jupyter-alabaster-theme",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:jupyverse",
+      "target": "user:davidbrochart"
+    },
+    {
+      "source": "package:jupyterhealth-client",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyterhub-firstuseauthenticator",
+      "target": "user:yuvipanda"
+    },
+    {
+      "source": "package:jupyterhub-firstuseauthenticator",
+      "target": "user:jupyterhub-bot"
+    },
+    {
+      "source": "package:jupyterhub-firstuseauthenticator",
+      "target": "user:willirath"
+    },
+    {
+      "source": "package:jupyterhub-firstuseauthenticator",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyterhub-firstuseauthenticator",
+      "target": "user:consideRatio"
+    },
+    {
+      "source": "package:jupyter-kernel-test",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:jupyter-kernel-test",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:notebook-shim",
+      "target": "user:zsailer"
+    },
+    {
+      "source": "package:notebook-shim",
+      "target": "user:jtp"
+    },
+    {
+      "source": "package:notebook-shim",
+      "target": "user:datalayer"
+    },
+    {
+      "source": "package:notebook-shim",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:comm",
+      "target": "user:jasongrout"
+    },
+    {
+      "source": "package:comm",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:comm",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:voici-core",
+      "target": "user:trungleduc"
+    },
+    {
+      "source": "package:voici-core",
+      "target": "user:jtp"
+    },
+    {
+      "source": "package:voici-core",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:xeus-python-shell",
+      "target": "user:JohanMabille"
+    },
+    {
+      "source": "package:xeus-python-shell",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:xeus-python-shell",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:voila",
+      "target": "user:jasongrout"
+    },
+    {
+      "source": "package:voila",
+      "target": "user:trungleduc"
+    },
+    {
+      "source": "package:voila",
+      "target": "user:maartenbreddels"
+    },
+    {
+      "source": "package:voila",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:voila",
+      "target": "user:jtp"
+    },
+    {
+      "source": "package:voila",
+      "target": "user:JohanMabille"
+    },
+    {
+      "source": "package:voila",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:nbgrader",
+      "target": "user:jtp"
+    },
+    {
+      "source": "package:nbgrader",
+      "target": "user:nbrichet"
+    },
+    {
+      "source": "package:nbgrader",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:nbgrader",
+      "target": "user:jhamrick"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:jasongrout"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:blink1073"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:darian"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:jupyterlab-launcher",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:ipython-pygments-lexers",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:ipython-pygments-lexers",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyterlite-xeus",
+      "target": "user:DerThorsten"
+    },
+    {
+      "source": "package:jupyterlite-xeus",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:davidbrochart"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:MSeal"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:jupyter-console",
+      "target": "user:jhamrick"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:RRosio"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:gnestor"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:darian"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:kevin-bates"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:lresende"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:mpacer"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:zsailer"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:jtp"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:datalayer"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:ericsnekbytes"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:notebook",
+      "target": "user:jhamrick"
+    },
+    {
+      "source": "package:pytest-check-links",
+      "target": "user:darian"
+    },
+    {
+      "source": "package:pytest-check-links",
+      "target": "user:vidartf"
+    },
+    {
+      "source": "package:pytest-check-links",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:wrapspawner",
+      "target": "user:milligan"
+    },
+    {
+      "source": "package:jupyterhub-simplespawner",
+      "target": "user:yuvipanda"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:jasongrout"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:maartenbreddels"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:itayd"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:ipywidgets",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:jupyter-server-ydoc",
+      "target": "user:davidbrochart"
+    },
+    {
+      "source": "package:jupyter-server-ydoc",
+      "target": "user:hbcarlos"
+    },
+    {
+      "source": "package:jupyter-server-ydoc",
+      "target": "user:darian"
+    },
+    {
+      "source": "package:jupyter-server-ydoc",
+      "target": "user:fcollonval"
+    },
+    {
+      "source": "package:jupyter-server-ydoc",
+      "target": "user:krassowski"
+    },
+    {
+      "source": "package:jupyter-server-ydoc",
+      "target": "user:jtp"
+    },
+    {
+      "source": "package:jupyter-server-ydoc",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:jupyterlite-terminal",
+      "target": "user:ianthomas23"
+    },
+    {
+      "source": "package:nbclient",
+      "target": "user:davidbrochart"
+    },
+    {
+      "source": "package:nbclient",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:nbclient",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:nbclient",
+      "target": "user:MSeal"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:mpacer"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:parente"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:mdpacer"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:nbviewer",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:ianthomas23"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:ipykernel",
+      "target": "user:ivanov"
+    },
+    {
+      "source": "package:voici",
+      "target": "user:trungleduc"
+    },
+    {
+      "source": "package:voici",
+      "target": "user:jtp"
+    },
+    {
+      "source": "package:voici",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:jupyterlite-core",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:papyri",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:matplotlib-inline",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:matplotlib-inline",
+      "target": "user:Sylvain.Corlay"
+    },
+    {
+      "source": "package:matplotlib-inline",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:matplotlib-inline",
+      "target": "user:martinRenou"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:takowl"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:mbussonn"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:minrk"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:darian"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:bgranger"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:jtp"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:fperez"
+    },
+    {
+      "source": "package:jupyter",
+      "target": "user:Kyle.Kelley"
+    },
+    {
+      "source": "package:jupyterlab-pseudo-language-pack",
+      "target": "user:blink1073"
+    },
+    {
+      "source": "package:jupyterlab-pseudo-language-pack",
+      "target": "user:fcollonval"
     }
   ]
 }
