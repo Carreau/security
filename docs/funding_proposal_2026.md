@@ -119,10 +119,6 @@ The role is also open to other qualified contributors if the council prefers.
 | Hourly rate | $80–$100 |
 | **Total cost** | **$8,000–$10,000** |
 
-This is a modest ask for a 6-month trial.
-
-
-
 ### Funding Source
 
 This proposal is submitted for consideration by the Jupyter Executive Council.
@@ -152,6 +148,11 @@ program against these concrete outcomes:
   documenting volume of reports, resolution status, and any systemic issues
   identified.
 - **Reporting** : activity reports to https://github.com/jupyter/cve/issues.
+
+We do not include preventive security work in the success metrics of this
+proposal as we believe triaging and responding to security issue should already
+take most of the time, though we don't exclude improving the tooling as
+practices as we work through existing issues.
 
 ## After the Pilot
 
