@@ -351,9 +351,76 @@ def save_trusted_publisher_cache(package_name: str, trusted_publisher: bool):
         )
 
 
+FASTLY_BLOCKED = "fastly_blocked"
+
+
+async def fetch_project_page_with_playwright(package_name: str) -> str | None:
+    """Render a PyPI project page in headless Chromium to bypass Fastly."""
+    try:
+        from playwright.async_api import async_playwright
+    except ImportError:
+        return None
+
+    url = f"https://pypi.org/project/{package_name}/"
+    try:
+        async with async_playwright() as p:
+            browser = await p.chromium.launch(headless=True)
+            page = await browser.new_page()
+            await page.set_extra_http_headers(
+                {
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+                }
+            )
+            await page.goto(url, wait_until="networkidle")
+            await page.wait_for_timeout(1000)
+            content = await page.content()
+            await browser.close()
+            return content
+    except Exception as e:
+        error_str = str(e).lower()
+        if "executable" in error_str or "browser" in error_str or "not found" in error_str:
+            print("\n  Playwright browser binaries not found. Installing...")
+            import subprocess
+            try:
+                subprocess.run(
+                    [sys.executable, "-m", "playwright", "install", "chromium"],
+                    check=True,
+                    timeout=300,
+                )
+                print("  Chromium installed. Retrying fetch...")
+                return await fetch_project_page_with_playwright(package_name)
+            except Exception as install_error:
+                print(f"\n  Failed to auto-install browsers: {install_error}")
+                print("  Try manually installing with:")
+                print("    uv run playwright install chromium\n")
+        else:
+            print(f"  Playwright error for {package_name}: {e}")
+        return None
+
+
+def _parse_trusted_publisher(html: str) -> bool | str | None:
+    """Parse a project-page HTML body.
+
+    Returns True/False if a sidebar was found, FASTLY_BLOCKED on the JS
+    challenge, or None if the page didn't look like a project page.
+    """
+    if "Client Challenge" in html and "sidebar-section" not in html:
+        return FASTLY_BLOCKED
+
+    soup = BeautifulSoup(html, "html.parser")
+    if not soup.select("div.sidebar-section"):
+        return None
+
+    for verified in soup.select("div.sidebar-section.verified"):
+        for h6 in verified.find_all("h6"):
+            if "GitHub Statistics" in h6.get_text():
+                return True
+    return False
+
+
 async def check_trusted_publisher(
     client: httpx.AsyncClient, package_name: str
-) -> bool | None:
+) -> bool | str | None:
     """Check whether a package uses Trusted Publishing.
 
     Looks for a "GitHub Statistics" subsection inside the sidebar's
@@ -361,6 +428,11 @@ async def check_trusted_publisher(
     (it also fires for PyPI-org-owned packages whose Owner is verified, e.g.
     django, numpy); GitHub Statistics specifically indicates the project's
     source URL was verified — which only happens through Trusted Publishing.
+
+    Returns True/False on detection, FASTLY_BLOCKED if Fastly served the bot
+    challenge and Playwright also failed, or None for other undetectable cases
+    (404, network error). The blocked sentinel is not cached so subsequent
+    runs retry.
     """
     cached = get_cached_trusted_publisher(package_name)
     if cached is not None:
@@ -388,22 +460,17 @@ async def check_trusted_publisher(
     except httpx.RequestError:
         return None
 
-    soup = BeautifulSoup(resp.text, "html.parser")
-    # Every real PyPI project page renders sidebar-section blocks; absence
-    # means we got a bot challenge, an error page, or some other non-project
-    # response. Return None and don't cache so the next run retries.
-    if not soup.select("div.sidebar-section"):
-        return None
+    result = _parse_trusted_publisher(resp.text)
 
-    result = False
-    for verified in soup.select("div.sidebar-section.verified"):
-        for h6 in verified.find_all("h6"):
-            if "GitHub Statistics" in h6.get_text():
-                result = True
-                break
-        if result:
-            break
-    save_trusted_publisher_cache(package_name, result)
+    if result == FASTLY_BLOCKED:
+        # Fall back to a real browser to solve the JS challenge.
+        print(f"  Fastly challenge for {package_name}, retrying with Playwright")
+        rendered = await fetch_project_page_with_playwright(package_name)
+        if rendered is not None:
+            result = _parse_trusted_publisher(rendered)
+
+    if result is True or result is False:
+        save_trusted_publisher_cache(package_name, result)
     return result
 
 
@@ -495,8 +562,8 @@ async def fetch_release_times(
 
 async def fetch_trusted_publisher(
     packages: list[str],
-) -> dict[str, bool | None]:
-    results: dict[str, bool | None] = {}
+) -> dict[str, bool | str | None]:
+    results: dict[str, bool | str | None] = {}
 
     async with httpx.AsyncClient() as client:
 
@@ -575,7 +642,12 @@ def print_csv(data: list[dict]) -> None:
         else:
             release = ""
         tp = item.get("trusted_publisher")
-        tp_str = "" if tp is None else str(tp).lower()
+        if tp is True or tp is False:
+            tp_str = str(tp).lower()
+        elif tp == FASTLY_BLOCKED:
+            tp_str = "fastly_blocked"
+        else:
+            tp_str = ""
         writer.writerow([
             item["name"],
             f"https://pypi.org/project/{item['name']}",
@@ -613,6 +685,8 @@ def print_table(data: list[dict]) -> None:
             tp_cell = "[green]✓[/green]"
         elif tp is False:
             tp_cell = "[red]✗[/red]"
+        elif tp == FASTLY_BLOCKED:
+            tp_cell = "[yellow](fastly blocked)[/yellow]"
         else:
             tp_cell = "[dim]-[/dim]"
         table.add_row(
@@ -686,6 +760,8 @@ class TideApp(App):
                 tp_text = Text("✓", style="bold green")
             elif tp is False:
                 tp_text = Text("✗", style="bold yellow")
+            elif tp == FASTLY_BLOCKED:
+                tp_text = Text("(fastly blocked)", style="yellow")
             else:
                 tp_text = Text("—", style="dim")
 
