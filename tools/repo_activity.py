@@ -931,12 +931,19 @@ function render() {
     let who = "";
     if (r.maintainer_actor) who = ` <span class="muted">(${esc(r.maintainer_actor)}, ${esc(r.maintainer_event)})</span>`;
     cells.push(`<td class="col-last_maintainer_action ${m.cls}" title="${m.title}">${m.text}${deltaSpan("last_maintainer_action", r)}${who}</td>`);
+    const packages = r.packages || [];
     const rr = rel(r.last_release);
-    const pkgs = (r.packages || []).map(p => p.name + (p.version ? " " + p.version : "")).join(", ");
+    const pkgs = packages.map(p => p.name + (p.version ? " " + p.version : "")).join(", ");
     const pkgTitle = pkgs ? esc(pkgs) : "no mapped PyPI package";
+    // Link the date to the PyPI project page when exactly one package maps.
+    let relText = rr.text;
+    if (packages.length === 1 && r.last_release) {
+      const purl = "https://pypi.org/project/" + encodeURIComponent(packages[0].name) + "/";
+      relText = `<a href="${esc(purl)}" target="_blank" rel="noopener">${rr.text}</a>`;
+    }
     let pkgTag = "";
-    if ((r.packages || []).length > 1) pkgTag = ` <span class="muted">(${r.packages.length} pkgs)</span>`;
-    cells.push(`<td class="col-last_release ${rr.cls}" title="${rr.title || pkgTitle}">${rr.text}${deltaSpan("last_release", r)}${pkgTag}</td>`);
+    if (packages.length > 1) pkgTag = ` <span class="muted">(${packages.length} pkgs)</span>`;
+    cells.push(`<td class="col-last_release ${rr.cls}" title="${rr.title || pkgTitle}">${relText}${deltaSpan("last_release", r)}${pkgTag}</td>`);
     tr.innerHTML = cells.join("");
     tb.appendChild(tr);
   }
