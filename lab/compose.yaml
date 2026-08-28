@@ -1,0 +1,10 @@
+services:
+  lab:
+    build: .
+    ports: ["127.0.0.1:${JUPYTER_PORT:-8888}:${JUPYTER_PORT:-8888}"]
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN:?set GITHUB_TOKEN, or put it in a .env file}
+      - JUPYTER_TOKEN
+      - JUPYTER_PORT
+    volumes:
+      - ./advisories.ipynb:/home/lab/work/advisories.ipynb
