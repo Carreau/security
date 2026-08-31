@@ -22,14 +22,6 @@ And click on the link.
 
 The first cell takes a while to fetch data from the API.
 
-## Good to know
-
-The charts are rebuilt from GitHub every time, so the numbers move as new reports come in.
-
-Anything you change in the notebook is saved back to this folder.
-
-The notebook is only reachable from your own computer.
-
 ## Maintenance
 
 - Keep the github-security-overview pin up-to-date in the Dockerfile 
